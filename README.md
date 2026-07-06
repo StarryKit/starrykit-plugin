@@ -1,3 +1,9 @@
+> **Thanks for clicking in!**
+> This repo is no longer maintained. I'm now focusing on building and lauching the product version. Once the product version is stable enough, I'll re-open this open source version for a more mature editor.
+
+
+----
+
 <p align="center">
   <img src="./packages/slides-editor/src/assets/starry-slides-wordmark-on-purple.svg" alt="Starry Slides" width="420" />
 </p>
