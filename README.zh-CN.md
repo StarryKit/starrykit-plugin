@@ -1,3 +1,11 @@
+<div align="center">
+  <h2>✨ Starry Slides 在线版现已上线</h2>
+  <p>无需安装，直接使用 AI 创建和编辑完全可编辑的演示文稿。</p>
+  <p><a href="https://starrykit.com/"><strong>前往 starrykit.com 立即体验 →</strong></a></p>
+</div>
+
+---
+
 <p align="center">
   <img src="./packages/slides-editor/src/assets/starry-slides-wordmark-on-purple.svg" alt="Starry Slides" width="420" />
 </p>
@@ -14,7 +22,7 @@
 
 Starry Slides 是一个基于 AI Agent 的幻灯片/演示文稿编辑器，让你的 Agent 使用 HTML 作为源文件生成完全可编辑的 PPT。
 
-> 我们正在开发产品版；开源版会持续修复 Bug，Editor 更新也会周期性同步到这里。
+> 本仓库为 Starry Slides 开源版。使用已托管的 SaaS 在线版，请访问 [starrykit.com](https://starrykit.com/)；开源版会继续修复 Bug，Editor 更新也会周期性同步到这里。
 
 ## Features
 

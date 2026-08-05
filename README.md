@@ -1,8 +1,10 @@
-> **Thanks for clicking in!**
-> This repo is no longer maintained. I'm now focusing on building and lauching the product version. Once the product version is stable enough, I'll re-open this open source version for a more mature editor.
+<div align="center">
+  <h2>✨ Starry Slides is now available online</h2>
+  <p>Create and edit fully editable presentations with AI—no installation required.</p>
+  <p><a href="https://starrykit.com/"><strong>Try Starry Slides at starrykit.com →</strong></a></p>
+</div>
 
-
-----
+---
 
 <p align="center">
   <img src="./packages/slides-editor/src/assets/starry-slides-wordmark-on-purple.svg" alt="Starry Slides" width="420" />
@@ -23,7 +25,7 @@
 
 Starry Slides is a slide/presentation editor that gives your agent ability to generate fully editable slides with HTML as the source file.
 
-> We are building the product version now. The open-source version still receives bug fixes, and Editor updates will be synced back here periodically.
+> This repository contains the open-source version of Starry Slides. For the hosted SaaS experience, visit [starrykit.com](https://starrykit.com/). The open-source version will continue to receive bug fixes, with Editor updates synced back periodically.
 
 
 
