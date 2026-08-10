@@ -81,6 +81,9 @@ describe("plugin bundle", () => {
     for (const path of ["README.md", "README.zh-CN.md"]) {
       assert.ok(existsSync(resolve(ROOT, path)), `${path} is missing`);
     }
+    for (const path of ["docs/README.md", "docs/README.zh-CN.md"]) {
+      assert.ok(existsSync(resolve(ROOT, path)), `${path} is missing`);
+    }
     for (const host of HOSTS) {
       assert.ok(existsSync(resolve(ROOT, "docs", host, "README.md")), `${host} English guide is missing`);
       assert.ok(existsSync(resolve(ROOT, "docs", host, "README.zh-CN.md")), `${host} Chinese guide is missing`);
@@ -92,6 +95,8 @@ describe("plugin bundle", () => {
     const markdownFiles = [
       "README.md",
       "README.zh-CN.md",
+      "docs/README.md",
+      "docs/README.zh-CN.md",
       "docs/development.md",
       ...HOSTS.flatMap((host) => [`docs/${host}/README.md`, `docs/${host}/README.zh-CN.md`]),
     ];

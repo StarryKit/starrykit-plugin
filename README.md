@@ -13,9 +13,8 @@
   <a href="#install">Install</a> ·
   <a href="#see-it-in-action">Demos</a> ·
   <a href="#usage">Usage</a> ·
-  <a href="#metrics">Metrics</a> ·
   <a href="#features">Features</a> ·
-  <a href="#manual-setup">Manual setup</a> ·
+  <a href="docs/README.md">Manual setup</a> ·
   <a href="https://starrykit.com">Website</a>
 </p>
 
@@ -35,7 +34,7 @@ Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g 
 MCP: https://mcp.starrykit.com/mcp
 ```
 
-Your agent installs the Skill, configures the MCP, and opens browser OAuth. For manual installation, choose your host in [Manual setup](#manual-setup).
+Your agent installs the Skill, configures the MCP, and opens browser OAuth. If needed, open the [manual setup guides](docs/README.md).
 
 ## See it in action
 
@@ -62,36 +61,13 @@ Each request produces an editable StarryKit result you can review and continue r
 
 You can also ask StarryKit to inspect an existing document, tighten its story, redesign one page, reorder content, or export selected pages.
 
-## Metrics
-
-| ⚡ 1 prompt install | 🧰 14 MCP tools | 📤 7 export formats | 🔐 Browser OAuth |
-| --- | --- | --- | --- |
-| Skill + MCP setup | Read, author, preview, and export | PPTX, PDF, SVG, PNG, JPEG, HTML, Google Slides | No pasted access tokens |
-
 ## Features
 
-| Feature | What your agent can do |
+| Feature | What it means |
 | --- | --- |
-| ✨ Visual creation | Create presentations, posters, social graphics, invitations, and other editable designs. |
-| 🔎 Document discovery | Browse only the StarryKit documents and folders you authorize. |
-| 🎨 Design direction | Apply clear hierarchy, intentional composition, and page-specific art direction. |
-| 🛠 Focused editing | Read content and previews, then edit, rewrite, retitle, or reorder the right page. |
-| ✅ Reviewable drafts | Hand every generated page back to you for review inside StarryKit. |
-| 📤 Flexible export | Export a complete document or selected pages in seven supported formats. |
-
-## Manual setup
-
-If your agent cannot complete installation automatically, use the bilingual guide for your host:
-
-| Host | English | 中文 |
-| --- | --- | --- |
-| Codex | [Setup](docs/codex/README.md) | [安装](docs/codex/README.zh-CN.md) |
-| Claude Code | [Setup](docs/claude-code/README.md) | [安装](docs/claude-code/README.zh-CN.md) |
-| Cursor | [Setup](docs/cursor/README.md) | [安装](docs/cursor/README.zh-CN.md) |
-| OpenCode | [Setup](docs/opencode/README.md) | [安装](docs/opencode/README.zh-CN.md) |
-| OpenClaw | [Setup](docs/openclaw/README.md) | [安装](docs/openclaw/README.zh-CN.md) |
-| Pi | [Current limitation](docs/pi/README.md) | [当前限制](docs/pi/README.zh-CN.md) |
-| Other MCP hosts | [Setup](docs/other-hosts/README.md) | [安装](docs/other-hosts/README.zh-CN.md) |
+| ✏️ Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
+| 📤 Perfect export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
+| 💡 [Prompt Library](https://starrykit.com/explore) | Explore ready-to-use prompts and visual ideas, then open one in StarryKit to make it your own. |
 
 For maintainers, [development.md](docs/development.md) explains the repository checks and what the CI workflow does—and does not—test.
 

@@ -13,9 +13,8 @@
   <a href="#安装">安装</a> ·
   <a href="#看看实际效果">效果展示</a> ·
   <a href="#使用方法">使用方法</a> ·
-  <a href="#关键指标">关键指标</a> ·
   <a href="#功能">功能</a> ·
-  <a href="#手动安装">手动安装</a> ·
+  <a href="docs/README.zh-CN.md">手动安装</a> ·
   <a href="https://starrykit.com">官方网站</a>
 </p>
 
@@ -35,7 +34,7 @@ Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g 
 MCP: https://mcp.starrykit.com/mcp
 ```
 
-Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作时，请在[手动安装](#手动安装)中选择对应宿主。
+Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作时，请打开[宿主安装指南](docs/README.zh-CN.md)。
 
 ## 看看实际效果
 
@@ -62,36 +61,13 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 你也可以让 StarryKit 检查已有文档、收紧叙事、重新设计某一页、调整页面顺序，或者只导出指定页面。
 
-## 关键指标
-
-| ⚡ 一句 Prompt 安装 | 🧰 14 个 MCP 工具 | 📤 7 种导出格式 | 🔐 浏览器 OAuth |
-| --- | --- | --- | --- |
-| 同时配置 Skill 与 MCP | 读取、创作、预览与导出 | PPTX、PDF、SVG、PNG、JPEG、HTML、Google Slides | 无需粘贴 access token |
-
 ## 功能
 
-| 功能 | Agent 可以做什么 |
+| 功能 | 说明 |
 | --- | --- |
-| ✨ 视觉创作 | 创建演示文稿、海报、社交媒体图片、邀请函和其他可编辑设计。 |
-| 🔎 文档发现 | 只浏览你已经授权的 StarryKit 文档与文件夹。 |
-| 🎨 设计指导 | 建立清晰的信息层级、有意图的构图和针对每一页的视觉方向。 |
-| 🛠 精确修改 | 读取内容与预览，然后编辑、重写、改标题或移动正确的页面。 |
-| ✅ 草稿审核 | 每一张生成页面都交回 StarryKit，由你审核并决定是否采用。 |
-| 📤 灵活导出 | 将完整文档或指定页面导出为七种支持格式。 |
-
-## 手动安装
-
-如果 Agent 无法自动完成安装，请查看对应宿主的中英文指南：
-
-| 宿主 | 中文 | English |
-| --- | --- | --- |
-| Codex | [安装](docs/codex/README.zh-CN.md) | [Setup](docs/codex/README.md) |
-| Claude Code | [安装](docs/claude-code/README.zh-CN.md) | [Setup](docs/claude-code/README.md) |
-| Cursor | [安装](docs/cursor/README.zh-CN.md) | [Setup](docs/cursor/README.md) |
-| OpenCode | [安装](docs/opencode/README.zh-CN.md) | [Setup](docs/opencode/README.md) |
-| OpenClaw | [安装](docs/openclaw/README.zh-CN.md) | [Setup](docs/openclaw/README.md) |
-| Pi | [当前限制](docs/pi/README.zh-CN.md) | [Current limitation](docs/pi/README.md) |
-| 其他 MCP 宿主 | [安装](docs/other-hosts/README.zh-CN.md) | [Setup](docs/other-hosts/README.md) |
+| ✏️ 完整可编辑 | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
+| 📤 完美导出 | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
+| 💡 [Prompt Library](https://starrykit.com/explore) | 浏览可以直接使用的 Prompt 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
 
 仓库维护者可以阅读 [development.md](docs/development.md)，了解 CI workflow 与测试实际覆盖和不覆盖的内容。
 
