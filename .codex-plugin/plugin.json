@@ -1,5 +1,5 @@
 {
-  "name": "starrykit-agent-plugin",
+  "name": "starrykit-plugin",
   "version": "0.1.0",
   "description": "Turn ideas into polished, editable visual design documents with StarryKit Authoring.",
   "author": {
@@ -12,7 +12,7 @@
   "keywords": ["starrykit", "authoring", "documents", "mcp"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "StarryKit Authoring",
+    "displayName": "StarryKit Plugin",
     "shortDescription": "Create polished visual design documents.",
     "longDescription": "Create, understand, and refine presentations, posters, social graphics, and other editable visual design documents with StarryKit's hosted Authoring tools.",
     "developerName": "StarryKit",
