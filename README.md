@@ -1,45 +1,103 @@
-# StarryKit Plugin
+<p align="center">
+  <img src="assets/brand/starrykit-wordmark.svg" alt="StarryKit" width="420" />
+</p>
 
-> 本仓库是从 StarryKit 主仓导出的独立发布快照。Hosted MCP 服务端与其 contract 测试保留在 StarryKit 主仓（不开源）；本仓库只包含宿主安装所需的 manifest、canonical Skill、宿主 adapter 与契约校验。服务端行为契约见 `docs/versioning.md` 与 `hosts/compatibility.json`。
+<h1 align="center">StarryKit Plugin</h1>
 
-这是多个 Agent 宿主共用的 StarryKit Authoring Plugin。canonical Skill 是完整的用户入口：可以发现、连接并使用 Hosted MCP；Hosted MCP 也是完整的能力入口：没有加载 Skill 时仍可只靠 instructions、tool metadata、严格 schema 与 structured results 正确工作。两者共享行为契约但互不假设对方已经提供上下文。Claude Code 与 Codex 使用仓库根目录的 manifest，其他宿主见 `hosts/`。
+<p align="center">
+  Turn an idea into a polished, editable presentation or visual design—without leaving your AI agent.
+</p>
 
-OAuth 授权分两步：先确认连接方、账户与目标 Workspace，再选择访问范围——默认整个 Workspace（read & write，可改为只读），也可以改为若干个 Folder 并按 Folder 混合设置 `read` / `read_write`，还可以让 StarryKit 在允许授权时新建一个 Folder。Plugin 只能看到授权范围内的 Document：Folder 模式不包含 Workspace 根目录，把 Document 移入授权 Folder 会获得访问，移出会立即失去访问；用户随时可以撤销授权。宿主名称仅用于展示，不参与权限。
+<p align="center">
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="#install-with-one-prompt">Get started</a> ·
+  <a href="#see-it-in-action">Demos</a> ·
+  <a href="#manual-setup">Manual setup</a> ·
+  <a href="https://starrykit.com">Website</a>
+</p>
 
-## MCP endpoint
+StarryKit Plugin gives Codex, Claude Code, Cursor, OpenCode, OpenClaw, and other compatible agents a shared visual-authoring workflow. Describe the story you want to tell; your agent can create a StarryKit document, compose its pages, refine existing designs, and export the result through StarryKit's hosted MCP service.
 
-Plugin 固定连接 StarryKit Production Streamable HTTP MCP endpoint：
+The result stays editable in StarryKit. You keep control of the document, the review process, and the final export.
+
+## Install with one prompt
+
+Send this prompt to your agent:
 
 ```text
-https://mcp.starrykit.com/mcp
+Install the StarryKit Plugin from https://github.com/StarryKit/starrykit-plugin.
+Configure the StarryKit Hosted MCP server at https://mcp.starrykit.com/mcp,
+install the canonical skill from skills/starrykit-authoring for this agent host,
+complete OAuth, and verify the connection by listing my accessible StarryKit documents.
+Follow the host-specific guide in docs/ when needed. Never ask me to paste an access token.
 ```
 
-不要把 access token 或 client secret 写入配置；MCP host 与宿主客户端通过 OAuth 完成认证。
+Your agent should detect its host, install the Skill, add the remote MCP connection, open StarryKit's browser-based OAuth flow, and verify the tools. After that, simply ask for an outcome:
 
-## 目录
+```text
+Create a five-page pitch deck for an AI travel planner. Make it optimistic,
+editorial, and image-led, with one clear idea per page.
+```
 
-- `.codex-plugin/plugin.json`：Codex manifest。
-- `.claude-plugin/plugin.json`：Claude Code manifest。
-- `.mcp.json`：共享 Hosted MCP 配置。
-- `skills/starrykit-authoring/SKILL.md`：完整的跨宿主发现、连接、OAuth、Authoring 与恢复工作流；`references/host-setup.md` 提供按需加载的宿主接入路径。
-- `hosts/`：其他宿主的接入层（adapter、兼容等级、machine-readable `compatibility.json` 支持矩阵、通用手动接入说明）。
-- `docs/versioning.md`：版本策略、兼容矩阵、回滚方式与 MCP contract version 声明位置。
-- `scripts/validate.py`：root 契约校验（Codex/Claude manifest、`.mcp.json`、Skill 边界短语、fixtures）。
-- `scripts/validate-hosts.mjs`：hosts 层契约校验。
-- `tests/`：契约 fixtures 与测试（`fixtures.json` 为 Skill 行为样例，也是正/负 eval 与平台提交测试用例的数据源；`host-fixtures/` 为宿主 manifest 契约样例；`host-contract.test.mjs` 为可独立运行的契约测试）。
+```text
+Open my latest product launch deck, tighten the story, and redesign the crowded
+comparison page without changing the underlying claims.
+```
 
-既有 `.claude-plugin/`、`.codex-plugin/` 保持在 plugin 根目录：Claude Code plugin 体系要求 `.claude-plugin/plugin.json` 位于根目录，迁入 `hosts/` 会破坏已验证的安装路径；布局详见 `hosts/README.md`。
+```text
+Turn this event brief into an editable portrait poster, then export a PNG.
+```
 
-## 校验与测试
+## See it in action
 
-- `node scripts/validate-hosts.mjs`：hosts 层契约校验。
-- `python3 scripts/validate.py`：root 契约校验与 fixtures。
-- `node --test tests/host-contract.test.mjs`：契约测试（覆盖上述两者与导出流程）。
+### Build and refine a complete presentation
 
-以上命令在 plugin 目录内运行。
+Create a narrative, direct the visual system, author every page, and continue refining the editable result with your agent.
 
-## License
+[![Watch StarryKit create and edit a road-trip presentation](assets/demos/roadtrip-editing-poster.webp)](assets/demos/roadtrip-editing.mp4)
 
-StarryKit Plugin is licensed under the [MIT License](./LICENSE).
+<p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the presentation demo</a></p>
 
-<sub>Historical note: this repository previously hosted Starry Slides. The final source snapshot is preserved on the [`archive/starry-slides-v0.1.38`](https://github.com/StarryKit/starrykit-plugin/tree/archive/starry-slides-v0.1.38) branch.</sub>
+### Create editable campaign and event graphics
+
+Use the same workflow for posters, social graphics, invitations, and other canvas-based designs—not just slide decks.
+
+[![Watch StarryKit create an editable event design](assets/demos/event-design-poster.webp)](assets/demos/event-design.mp4)
+
+<p align="center"><a href="assets/demos/event-design.mp4">Watch the event-design demo</a></p>
+
+## What your agent can do
+
+- Create presentations, posters, social graphics, and other editable visual documents.
+- Browse the StarryKit documents and folders you have authorized.
+- Read page content, inspect previews, and make focused visual edits.
+- Add, rewrite, reorder, and retitle pages while preserving document structure.
+- Export selected pages or complete documents as PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides.
+- Hand every generated page back to you as a reviewable draft in StarryKit.
+
+## How it works
+
+The Plugin combines two pieces:
+
+- The **StarryKit Authoring Skill** teaches your agent how to think like a design director, write precise page briefs, use the right authoring tool, and avoid generic AI-generated layouts.
+- The **StarryKit Hosted MCP** provides the live tools that read, create, edit, preview, and export authorized StarryKit documents.
+
+Authentication happens through OAuth in your browser. Do not paste access tokens, client secrets, or account credentials into chat or configuration. Your agent can only access the workspace or folders you authorize, and you can revoke that access in StarryKit.
+
+## Manual setup
+
+The one-prompt installation above is recommended. If your agent cannot complete a step automatically, use the bilingual manual guide for your host:
+
+| Host | English | 中文 |
+| --- | --- | --- |
+| Codex | [Setup](docs/codex/README.md) | [安装](docs/codex/README.zh-CN.md) |
+| Claude Code | [Setup](docs/claude-code/README.md) | [安装](docs/claude-code/README.zh-CN.md) |
+| Cursor | [Setup](docs/cursor/README.md) | [安装](docs/cursor/README.zh-CN.md) |
+| OpenCode | [Setup](docs/opencode/README.md) | [安装](docs/opencode/README.zh-CN.md) |
+| OpenClaw | [Setup](docs/openclaw/README.md) | [安装](docs/openclaw/README.zh-CN.md) |
+| Pi | [Current limitation](docs/pi/README.md) | [当前限制](docs/pi/README.zh-CN.md) |
+| Other MCP hosts | [Setup](docs/other-hosts/README.md) | [安装](docs/other-hosts/README.zh-CN.md) |
+
+For maintainers, [development.md](docs/development.md) explains the repository checks and what the CI workflow does—and does not—test.
+
+<sub>Historical note: this repository previously hosted Starry Slides. Its final source snapshot remains available on the <a href="https://github.com/StarryKit/starrykit-plugin/tree/archive/starry-slides-v0.1.38">archive/starry-slides-v0.1.38</a> branch.</sub>

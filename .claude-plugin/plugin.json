@@ -1,6 +1,6 @@
 {
-  "name": "starrykit-agent-plugin",
-  "displayName": "StarryKit Authoring",
+  "name": "starrykit-plugin",
+  "displayName": "StarryKit Plugin",
   "version": "0.1.0",
   "description": "Turn ideas into polished, editable visual design documents with StarryKit Authoring.",
   "author": {

@@ -1,11 +1,9 @@
 {
-  "name": "starrykit-agent-plugin",
+  "name": "starrykit-plugin",
   "version": "0.1.0",
   "private": true,
-  "description": "StarryKit Authoring plugin: canonical Skill, host adapters, and Hosted MCP configuration for compatible agent hosts.",
+  "description": "StarryKit Plugin manifests, canonical Authoring Skill, and user setup guides.",
   "scripts": {
-    "test": "node --test tests/host-contract.test.mjs",
-    "validate": "node scripts/validate-hosts.mjs",
-    "validate:root": "python3 scripts/validate.py"
+    "test": "node --test tests/plugin.test.mjs"
   }
 }
