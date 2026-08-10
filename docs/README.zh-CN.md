@@ -12,4 +12,4 @@
 - [Pi — 当前限制](pi/README.zh-CN.md)
 - [其他兼容 MCP 的宿主](other-hosts/README.zh-CN.md)
 
-所有支持的安装方式都会使用同一份 canonical `starrykit-authoring` Skill，并通过宿主的浏览器 OAuth 流程连接 `https://mcp.starrykit.com/mcp`。
+所有支持的安装方式都会使用同一份 canonical `starrykit` Skill，并通过宿主的浏览器 OAuth 流程连接 `https://mcp.starrykit.com/mcp`。

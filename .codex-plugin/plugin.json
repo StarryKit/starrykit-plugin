@@ -1,7 +1,7 @@
 {
   "name": "starrykit-plugin",
   "version": "0.1.0",
-  "description": "Turn ideas into polished, editable visual design documents with StarryKit Authoring.",
+  "description": "Turn ideas into polished, editable visual design documents with StarryKit.",
   "author": {
     "name": "StarryKit",
     "url": "https://github.com/StarryKit"
@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "StarryKit Plugin",
     "shortDescription": "Create polished visual design documents.",
-    "longDescription": "Create, understand, and refine presentations, posters, social graphics, and other editable visual design documents with StarryKit's hosted Authoring tools.",
+    "longDescription": "Create, understand, and refine presentations, posters, social graphics, and other editable visual design documents with StarryKit's hosted design tools.",
     "developerName": "StarryKit",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],

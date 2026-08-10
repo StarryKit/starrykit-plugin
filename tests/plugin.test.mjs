@@ -43,17 +43,27 @@ describe("plugin bundle", () => {
   });
 
   it("ships a valid canonical Skill with essential safety boundaries", () => {
-    const skill = read("skills/starrykit-authoring/SKILL.md");
+    const skill = read("skills/starrykit/SKILL.md");
+    const workflow = read("skills/starrykit/references/mcp-workflow.md");
+    const metadata = read("skills/starrykit/agents/openai.yaml");
+    const completeSkill = `${skill}\n${workflow}`;
 
-    assert.match(skill, /^---\nname: starrykit-authoring\ndescription: .+\n---\n/);
-    assert.match(skill, /# StarryKit Authoring/);
-    assert.ok(skill.includes(PRODUCTION_MCP_URL), "Skill must reference the production MCP endpoint");
+    assert.ok(!existsSync(resolve(ROOT, "skills/starrykit-authoring")), "legacy Skill name must stay removed");
+    assert.match(skill, /^---\nname: starrykit\ndescription: .+\n---\n/);
+    assert.match(skill, /# StarryKit/);
+    assert.match(skill, /references\/mcp-workflow\.md/);
+    assert.match(skill, /## Work from any reference/);
+    assert.match(skill, /`design\.md`/);
+    assert.match(metadata, /display_name: "StarryKit"/);
+    assert.match(metadata, /Use \$starrykit /);
+    assert.ok(!completeSkill.includes("starrykit-authoring"), "legacy Skill identifier must stay removed");
+    assert.ok(completeSkill.includes(PRODUCTION_MCP_URL), "Skill must reference the production MCP endpoint");
     for (const boundary of [
       "Never invoke or delegate to a private StarryKit Main Agent",
       "Do not accept, keep, commit, reject, discard, or drop a Page Draft",
       "A read-only grant rejects every write tool",
     ]) {
-      assert.ok(skill.includes(boundary), `Skill boundary missing: ${boundary}`);
+      assert.ok(completeSkill.includes(boundary), `Skill boundary missing: ${boundary}`);
     }
   });
 
@@ -78,6 +88,8 @@ describe("plugin bundle", () => {
       "docs/README.md",
       "docs/README.zh-CN.md",
       "docs/development.md",
+      "skills/starrykit/SKILL.md",
+      "skills/starrykit/references/mcp-workflow.md",
       ...HOSTS.flatMap((host) => [`docs/${host}/README.md`, `docs/${host}/README.zh-CN.md`]),
     ];
 

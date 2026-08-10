@@ -11,7 +11,7 @@ Clone this repository, then copy the canonical Skill into your personal Agent Sk
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.agents/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.agents/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.agents/skills/
 ```
 
 Codex discovers personal skills under `~/.agents/skills`. Restart Codex if the Skill does not appear.

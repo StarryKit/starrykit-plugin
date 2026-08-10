@@ -6,7 +6,7 @@
 
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
-openclaw skills install ./starrykit-plugin/skills/starrykit-authoring --as starrykit-authoring
+openclaw skills install ./starrykit-plugin/skills/starrykit --as starrykit
 ```
 
 如果希望所有本地 OpenClaw Agent 都能使用，请加上 `--global`。

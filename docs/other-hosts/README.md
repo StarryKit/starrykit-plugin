@@ -11,7 +11,7 @@ Your host must support:
 ## Setup
 
 1. Clone `https://github.com/StarryKit/starrykit-plugin`.
-2. Install `skills/starrykit-authoring/` in the host's supported Skill directory. Keep it canonical; do not fork the workflow into a host-specific copy.
+2. Install `skills/starrykit/` in the host's supported Skill directory. Keep it canonical; do not fork the workflow into a host-specific copy.
 3. Add a remote MCP server named `starrykit` with URL `https://mcp.starrykit.com/mcp`.
 4. Complete the host-managed browser OAuth flow. Never put an access token or client secret in configuration.
 5. Restart or refresh tool discovery, then ask the host to call `list_documents`.
