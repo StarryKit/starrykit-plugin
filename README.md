@@ -65,9 +65,9 @@ You can also ask StarryKit to inspect an existing document, tighten its story, r
 
 | Feature | What it means |
 | --- | --- |
-| ✏️ Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
-| 📤 Perfect export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
-| 💡 1000+ Prompts | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
+| ✏️&nbsp;Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
+| 📤&nbsp;Perfect&nbsp;export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
+| 💡&nbsp;1000+&nbsp;Prompts | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
 
 ---
 
