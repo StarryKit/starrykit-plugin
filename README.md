@@ -30,7 +30,7 @@ Send this to your agent:
 
 ```text
 Set up StarryKit for this agent.
-Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g -y
+Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit -g -y
 MCP: https://mcp.starrykit.com/mcp
 ```
 

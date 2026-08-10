@@ -9,7 +9,7 @@
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.claude/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.claude/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.claude/skills/
 ```
 
 Claude Code 会从 `~/.claude/skills` 发现个人 Skill。如果这是当前会话中新建的第一个 Skill 目录，请重启 Claude Code。

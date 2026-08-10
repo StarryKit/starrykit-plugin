@@ -11,7 +11,7 @@
 ## 安装
 
 1. Clone `https://github.com/StarryKit/starrykit-plugin`。
-2. 把 `skills/starrykit-authoring/` 安装到宿主支持的 Skill 目录。保持这份 canonical Skill，不要复制出宿主专用分叉。
+2. 把 `skills/starrykit/` 安装到宿主支持的 Skill 目录。保持这份 canonical Skill，不要复制出宿主专用分叉。
 3. 添加名为 `starrykit` 的远程 MCP，URL 为 `https://mcp.starrykit.com/mcp`。
 4. 通过宿主管理的浏览器流程完成 OAuth。不要把 access token 或 client secret 写进配置。
 5. 重启或刷新工具发现，然后让宿主调用 `list_documents`。

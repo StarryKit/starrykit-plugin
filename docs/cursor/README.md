@@ -9,7 +9,7 @@ Clone this repository and copy the canonical Skill into a Cursor-supported perso
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.cursor/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.cursor/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.cursor/skills/
 ```
 
 ## 2. Configure MCP

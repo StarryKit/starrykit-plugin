@@ -1,6 +1,6 @@
 # Repository development
 
-This repository is the installable client-side StarryKit Plugin bundle. It contains the public manifests, production MCP endpoint configuration, canonical Authoring Skill, user documentation, and demo media. The hosted MCP service and its end-to-end service tests live elsewhere.
+This repository is the installable client-side StarryKit Plugin bundle. It contains the public manifests, production MCP endpoint configuration, canonical StarryKit Skill, user documentation, and demo media. The hosted MCP service and its end-to-end service tests live elsewhere.
 
 ## What the workflow means
 

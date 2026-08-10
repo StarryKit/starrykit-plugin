@@ -2,7 +2,7 @@
   "name": "starrykit-plugin",
   "version": "0.1.0",
   "private": true,
-  "description": "StarryKit Plugin manifests, canonical Authoring Skill, and user setup guides.",
+  "description": "StarryKit Plugin manifests, canonical StarryKit Skill, and user setup guides.",
   "scripts": {
     "test": "node --test tests/plugin.test.mjs"
   }

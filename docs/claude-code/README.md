@@ -9,7 +9,7 @@ Use the root README's one-prompt installation first. These steps install the Ski
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.claude/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.claude/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.claude/skills/
 ```
 
 Claude Code discovers personal skills under `~/.claude/skills`. Restart Claude Code if this is the first Skill directory created during the current session.

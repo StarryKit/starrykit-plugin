@@ -9,7 +9,7 @@ Clone 本仓库，并把 canonical Skill 复制到 Cursor 支持的个人目录�
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.cursor/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.cursor/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.cursor/skills/
 ```
 
 ## 2. 配置 MCP

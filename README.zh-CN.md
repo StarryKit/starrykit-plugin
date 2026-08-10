@@ -30,7 +30,7 @@ StarryKit 让你的 AI Agent 直接拥有视觉创作能力：
 
 ```text
 请为当前 Agent 配置 StarryKit。
-Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g -y
+Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit -g -y
 MCP: https://mcp.starrykit.com/mcp
 ```
 

@@ -1,12 +1,12 @@
 interface:
-  display_name: "StarryKit Authoring"
+  display_name: "StarryKit"
   short_description: "Create polished visual design documents"
-  default_prompt: "Use $starrykit-authoring to turn my idea into a polished, editable StarryKit design document."
+  default_prompt: "Use $starrykit to turn my idea into a polished, editable StarryKit design document."
 dependencies:
   tools:
     - type: "mcp"
       value: "starrykit"
-      description: "Hosted StarryKit design document and Authoring tools"
+      description: "Hosted StarryKit design document tools"
       transport: "streamable_http"
       url: "https://mcp.starrykit.com/mcp"
 policy:

@@ -7,7 +7,7 @@
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.config/opencode/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.config/opencode/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.config/opencode/skills/
 ```
 
 OpenCode 也支持 `~/.agents/skills`，以及项目级 `.opencode/skills` 或 `.agents/skills`。

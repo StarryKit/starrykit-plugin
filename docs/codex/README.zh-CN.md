@@ -11,7 +11,7 @@ Clone 本仓库，然后把 canonical Skill 复制到个人 Agent Skills 目录�
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.agents/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.agents/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.agents/skills/
 ```
 
 Codex 会从 `~/.agents/skills` 发现个人 Skill。如果没有出现，请重启 Codex。

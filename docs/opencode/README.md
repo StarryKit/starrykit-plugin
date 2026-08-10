@@ -7,7 +7,7 @@
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
 mkdir -p ~/.config/opencode/skills
-cp -R starrykit-plugin/skills/starrykit-authoring ~/.config/opencode/skills/
+cp -R starrykit-plugin/skills/starrykit ~/.config/opencode/skills/
 ```
 
 OpenCode also supports `~/.agents/skills` and project-local `.opencode/skills` or `.agents/skills` locations.

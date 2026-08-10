@@ -12,4 +12,4 @@ Choose your agent host:
 - [Pi — current limitation](pi/README.md)
 - [Other MCP-compatible hosts](other-hosts/README.md)
 
-Every supported setup installs the same canonical `starrykit-authoring` Skill and connects to `https://mcp.starrykit.com/mcp` through the host's browser OAuth flow.
+Every supported setup installs the same canonical `starrykit` Skill and connects to `https://mcp.starrykit.com/mcp` through the host's browser OAuth flow.
