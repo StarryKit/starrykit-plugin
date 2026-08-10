@@ -98,13 +98,16 @@ describe("plugin bundle", () => {
 
     for (const asset of [
       "assets/brand/starrykit-wordmark-on-purple.svg",
-      "assets/demos/roadtrip-editing-poster.webp",
       "assets/demos/roadtrip-editing.gif",
-      "assets/demos/roadtrip-editing.mp4",
-      "assets/demos/event-design-poster.webp",
       "assets/demos/event-design.gif",
+      "assets/demos/gallery-morrow-formworks.webp",
+      "assets/demos/gallery-relay-one.webp",
+      "assets/demos/gallery-orbit-drop-01.webp",
+      "assets/demos/gallery-type-index.webp",
+      "assets/demos/gallery-afterlight-2026.webp",
+      "assets/demos/gallery-where-the-rain-goes.webp",
     ]) {
-      assert.ok([".svg", ".webp", ".gif", ".mp4"].includes(extname(asset)));
+      assert.ok([".svg", ".webp", ".gif"].includes(extname(asset)));
       assert.ok(existsSync(resolve(ROOT, asset)), `${asset} is missing`);
     }
   });

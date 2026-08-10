@@ -42,8 +42,6 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 
 ![StarryKit creating and editing a road-trip presentation](assets/demos/roadtrip-editing.gif)
 
-<p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the HD presentation demo</a></p>
-
 ### Edit Manually and Export
 
 ![StarryKit creating an editable event poster](assets/demos/event-design.gif)
@@ -52,10 +50,19 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 
 Each request produces an editable StarryKit result you can review and continue refining.
 
+### Prompt → Showcase
+
 | Prompt | Showcase |
 | --- | --- |
-| **Presentation**<br><br>“Create a five-page road-trip deck. Make it optimistic, editorial, and image-led, with one clear idea per page.” | <img src="assets/demos/roadtrip-editing-poster.webp" alt="Editable road-trip presentation in StarryKit" width="520" /> |
-| **Poster**<br><br>“Turn this event brief into a bold, editable portrait poster for social media, then export a PNG.” | <img src="assets/demos/event-design-poster.webp" alt="Editable event poster in StarryKit" width="520" /> |
+| **Product catalog**<br><br>“Create a six-page launch catalog for a modular acoustic collection. Make it editorial, tactile, and specification-ready.” | <img src="assets/demos/gallery-morrow-formworks.webp" alt="Editorial product catalog created with StarryKit" width="520" /> |
+| **Technical launch**<br><br>“Turn this incident-response brief into a high-contrast launch deck built around one clear proof point: verified cause in 11 minutes.” | <img src="assets/demos/gallery-relay-one.webp" alt="High-contrast technical launch deck created with StarryKit" width="520" /> |
+
+### More from the Gallery
+
+| | |
+| --- | --- |
+| <img src="assets/demos/gallery-orbit-drop-01.webp" alt="Bold product campaign graphic created with StarryKit" width="420" /> | <img src="assets/demos/gallery-type-index.webp" alt="Typography education carousel created with StarryKit" width="420" /> |
+| <img src="assets/demos/gallery-afterlight-2026.webp" alt="Nocturnal garden festival poster created with StarryKit" width="420" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="Rain garden infographic created with StarryKit" width="420" /> |
 
 You can also ask StarryKit to inspect an existing document, tighten its story, redesign one page, reorder content, or export selected pages.
 
