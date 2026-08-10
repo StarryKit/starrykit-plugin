@@ -1,0 +1,12 @@
+{
+  "mcp": {
+    "servers": {
+      "starrykit": {
+        "url": "https://mcp.starrykit.com/mcp",
+        "transport": "streamable-http",
+        "auth": "oauth",
+        "enabled": true
+      }
+    }
+  }
+}

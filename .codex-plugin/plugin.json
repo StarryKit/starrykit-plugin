@@ -1,0 +1,27 @@
+{
+  "name": "starrykit-agent-plugin",
+  "version": "0.1.0",
+  "description": "Turn ideas into polished, editable visual design documents with StarryKit Authoring.",
+  "author": {
+    "name": "StarryKit",
+    "url": "https://github.com/StarryKit"
+  },
+  "homepage": "https://github.com/StarryKit/starrykit-plugin",
+  "repository": "https://github.com/StarryKit/starrykit-plugin",
+  "license": "MIT",
+  "keywords": ["starrykit", "authoring", "documents", "mcp"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "StarryKit Authoring",
+    "shortDescription": "Create polished visual design documents.",
+    "longDescription": "Create, understand, and refine presentations, posters, social graphics, and other editable visual design documents with StarryKit's hosted Authoring tools.",
+    "developerName": "StarryKit",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Turn my idea into a polished StarryKit presentation.",
+      "Review my StarryKit design document and refine one page."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

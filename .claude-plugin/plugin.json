@@ -1,0 +1,14 @@
+{
+  "name": "starrykit-agent-plugin",
+  "displayName": "StarryKit Authoring",
+  "version": "0.1.0",
+  "description": "Turn ideas into polished, editable visual design documents with StarryKit Authoring.",
+  "author": {
+    "name": "StarryKit",
+    "url": "https://github.com/StarryKit"
+  },
+  "homepage": "https://github.com/StarryKit/starrykit-plugin",
+  "repository": "https://github.com/StarryKit/starrykit-plugin",
+  "license": "MIT",
+  "keywords": ["starrykit", "authoring", "documents", "mcp"]
+}

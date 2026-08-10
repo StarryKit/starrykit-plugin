@@ -1,0 +1,347 @@
+{
+  "$schema": "./compatibility.schema.json",
+  "schemaVersion": 1,
+  "updated": "2026-08-05",
+  "canonical": {
+    "skillPath": "skills/starrykit-authoring/SKILL.md",
+    "endpointVariable": "STARRYKIT_MCP_URL",
+    "transport": "streamable-http",
+    "protocolEras": {
+      "2025-06-18": "supported",
+      "2026-07-28": "supported"
+    },
+    "oauth": {
+      "grantTypes": ["authorization_code", "refresh_token"],
+      "pkce": ["S256"],
+      "dynamicClientRegistration": "unauthenticated",
+      "scopes": ["documents:read", "documents:write", "authoring:run", "offline_access"],
+      "resourceMetadataPath": "/.well-known/oauth-protected-resource/mcp"
+    },
+    "draftAcceptDrop": false,
+    "clientInfoUsage": "best-effort-analytics-only"
+  },
+  "tiers": {
+    "A": "原生 SKILL.md + remote MCP OAuth，可直接安装。",
+    "B": "原生 Skill，但 MCP 需要受维护的 host adapter/extension。",
+    "C": "只支持 MCP 或 rules/AGENTS 指令，受限手动接入并明确缺失能力。"
+  },
+  "hosts": [
+    {
+      "id": "claude-code",
+      "displayName": "Claude Code",
+      "kind": "named",
+      "tier": "A",
+      "status": "shipped",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 898 },
+      "adapterPath": ".claude-plugin/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["user"],
+        "installPaths": ["plugin bundle skills/（由 Claude Code plugin 体系托管）"]
+      },
+      "mcp": {
+        "connection": "native-remote",
+        "transports": ["streamable-http", "sse", "stdio"],
+        "protocolEras": { "2025-06-18": "documented", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "authorization-code-pkce",
+          "dynamicClientRegistration": "documented",
+          "pkce": "documented"
+        },
+        "tokenStorage": "Claude Code 凭据存储（宿主托管）"
+      },
+      "lifecycle": {
+        "install": "通过 Claude Code plugin 体系安装本 plugin（根目录 .claude-plugin/ + .mcp.json）",
+        "login": "首次调用 StarryKit MCP 工具时按宿主提示完成 OAuth 授权并选择访问范围",
+        "update": "通过 plugin 更新机制拉取新版本",
+        "uninstall": "通过 plugin 体系卸载；在 StarryKit 设置中撤销授权"
+      },
+      "limitations": [
+        "Production endpoint 已固定为 https://mcp.starrykit.com/mcp",
+        "真实宿主 Stage dogfood 由 #898 跟踪"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/plugins-reference",
+        "https://code.claude.com/docs/en/mcp"
+      ]
+    },
+    {
+      "id": "codex",
+      "displayName": "Codex",
+      "kind": "named",
+      "tier": "A",
+      "status": "shipped",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 898 },
+      "adapterPath": ".codex-plugin/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["user"],
+        "installPaths": ["plugin bundle skills/（.codex-plugin/plugin.json 的 skills 字段声明）"]
+      },
+      "mcp": {
+        "connection": "native-remote",
+        "transports": ["streamable-http", "stdio"],
+        "protocolEras": { "2025-06-18": "documented", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "authorization-code",
+          "dynamicClientRegistration": "unknown",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "Codex 凭据存储（宿主托管）"
+      },
+      "lifecycle": {
+        "install": "通过 Codex plugin 体系安装本 plugin（根目录 .codex-plugin/plugin.json 引用 skills 与 .mcp.json）",
+        "login": "首次调用 StarryKit MCP 工具时按宿主提示完成 OAuth 授权并选择访问范围",
+        "update": "通过 plugin 更新机制拉取新版本",
+        "uninstall": "通过 plugin 体系卸载；在 StarryKit 设置中撤销授权"
+      },
+      "limitations": [
+        "Production endpoint 已固定为 https://mcp.starrykit.com/mcp",
+        "OAuth DCR/PKCE 细节未在公开文档确认，以 Stage dogfood 实测为准（#898）"
+      ],
+      "sources": ["https://developers.openai.com/codex/plugins"]
+    },
+    {
+      "id": "openclaw",
+      "displayName": "OpenClaw",
+      "kind": "named",
+      "tier": "A",
+      "status": "adapter-ready",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 959 },
+      "adapterPath": "hosts/openclaw/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["project", "user", "managed"],
+        "installPaths": [
+          "<workspace>/skills",
+          "<workspace>/.agents/skills",
+          "~/.agents/skills",
+          "~/.openclaw/skills"
+        ]
+      },
+      "mcp": {
+        "connection": "native-remote",
+        "transports": ["streamable-http", "sse", "stdio"],
+        "protocolEras": { "2025-06-18": "unknown", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "authorization-code",
+          "dynamicClientRegistration": "unknown",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "unknown"
+      },
+      "lifecycle": {
+        "install": "openclaw skills install <checkout>/skills/starrykit-authoring --as starrykit-authoring；openclaw mcp add starrykit --url \"$STARRYKIT_MCP_URL\" --transport streamable-http --auth oauth",
+        "login": "openclaw mcp login starrykit（按打印的 authorization URL 完成授权，必要时用 --code 继续）",
+        "update": "openclaw skills update --all；MCP 服务端升级不需要改客户端配置",
+        "uninstall": "无官方 skills uninstall 命令：手动删除 skill 目录或设 skills.entries.starrykit-authoring.enabled=false；从 mcp.servers 移除 starrykit"
+      },
+      "limitations": [
+        "无官方 skills uninstall 命令（openclaw/openclaw#14264）",
+        "token 存储位置与 OAuth DCR/PKCE 细节未在官方文档说明",
+        "最低版本未知"
+      ],
+      "sources": [
+        "https://docs.openclaw.ai/tools/skills",
+        "https://docs.openclaw.ai/tools/skills-config",
+        "https://docs.openclaw.ai/tools/mcp",
+        "https://github.com/openclaw/openclaw/issues/14264"
+      ]
+    },
+    {
+      "id": "pi",
+      "displayName": "Pi coding agent (pi-mono)",
+      "kind": "named",
+      "tier": "B",
+      "status": "planned",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 959 },
+      "adapterPath": "hosts/pi/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["project", "user", "package"],
+        "installPaths": [
+          "~/.pi/agent/skills",
+          "~/.agents/skills",
+          ".pi/skills",
+          ".agents/skills",
+          "pi package（package.json \"pi\".skills）"
+        ]
+      },
+      "mcp": {
+        "connection": "adapter-required",
+        "transports": [],
+        "protocolEras": { "2025-06-18": "unsupported", "2026-07-28": "unsupported" },
+        "oauth": {
+          "flow": "adapter-defined",
+          "dynamicClientRegistration": "unknown",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "由后续 MCP extension adapter 决定（未定）"
+      },
+      "lifecycle": {
+        "install": "将 skills/starrykit-authoring 复制到 ~/.pi/agent/skills/（MCP adapter 交付前工具不可用）",
+        "login": "由后续 MCP extension adapter 定义",
+        "update": "重新同步 canonical skill 目录；pi package 分发后用 pi update",
+        "uninstall": "删除 skill 目录；pi package 分发后用 pi remove <package>"
+      },
+      "limitations": [
+        "官方 README 明确无内建 MCP 支持，需要受维护的 extension adapter；adapter 交付前无法调用 Hosted MCP 工具",
+        "MCP client 不得实现在 Skill 脚本中，只能作为 extension/package adapter 交付",
+        "extension adapter 与 Stage dogfood 一并交付（#959 后续），本仓库当前只提供 Skill 安装路径与 adapter 契约说明"
+      ],
+      "sources": [
+        "https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/README.md",
+        "https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md",
+        "https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/extensions.md",
+        "https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/packages.md"
+      ]
+    },
+    {
+      "id": "cursor",
+      "displayName": "Cursor",
+      "kind": "named",
+      "tier": "A",
+      "status": "adapter-ready",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 959 },
+      "adapterPath": "hosts/cursor/",
+      "minVersion": "2.4（Agent Skills；MCP 更早版本即可用）",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["project", "user"],
+        "installPaths": [
+          ".cursor/skills",
+          ".agents/skills",
+          "~/.cursor/skills",
+          "~/.agents/skills",
+          "legacy: .claude/skills 与 ~/.claude/skills"
+        ]
+      },
+      "mcp": {
+        "connection": "native-remote",
+        "transports": ["streamable-http", "sse", "stdio"],
+        "protocolEras": { "2025-06-18": "unknown", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "authorization-code-pkce",
+          "dynamicClientRegistration": "documented",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "unknown"
+      },
+      "lifecycle": {
+        "install": "复制 skills/starrykit-authoring 到 .cursor/skills/ 或 ~/.cursor/skills/；将 hosts/cursor/mcp.json 合并进 .cursor/mcp.json（或使用 Add to Cursor deeplink）",
+        "login": "Cursor 收到 401 后自动发现授权服务器并跳转浏览器完成 OAuth（依赖服务端 DCR，StarryKit 已支持）",
+        "update": "重新同步 skill 目录；MCP 配置无需变更",
+        "uninstall": "从 mcp.json 移除 starrykit 条目并删除 skill 目录；在 StarryKit 设置中撤销授权"
+      },
+      "limitations": [
+        "OAuth 依赖服务端 DCR：Cursor 不提供手动填写 client_id/secret 的通用流程（官方论坛确认）",
+        "token 存储位置未公开文档化",
+        "mcp.json 已固定连接 Production endpoint https://mcp.starrykit.com/mcp"
+      ],
+      "sources": [
+        "https://cursor.com/docs/skills",
+        "https://cursor.com/changelog/2-4",
+        "https://cursor.com/docs/context/mcp",
+        "https://cursor.com/docs/context/mcp/install-links",
+        "https://forum.cursor.com/t/oauth-code-flow-with-cursor-in-mcp-server-without-dynamic-client-registration/115319"
+      ]
+    },
+    {
+      "id": "opencode",
+      "displayName": "OpenCode",
+      "kind": "named",
+      "tier": "A",
+      "status": "adapter-ready",
+      "verification": { "stageDogfood": "pending", "trackingIssue": 959 },
+      "adapterPath": "hosts/opencode/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "native-agent-skills",
+        "installScopes": ["project", "user"],
+        "installPaths": [
+          ".opencode/skills",
+          ".claude/skills",
+          ".agents/skills",
+          "~/.config/opencode/skills",
+          "~/.claude/skills",
+          "~/.agents/skills"
+        ]
+      },
+      "mcp": {
+        "connection": "native-remote",
+        "transports": ["streamable-http"],
+        "protocolEras": { "2025-06-18": "unknown", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "authorization-code",
+          "dynamicClientRegistration": "documented",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "~/.local/share/opencode/mcp-auth.json"
+      },
+      "lifecycle": {
+        "install": "复制 skills/starrykit-authoring 到 .opencode/skills/ 或 ~/.config/opencode/skills/；将 hosts/opencode/opencode.json 的 mcp 块合并进 opencode.json",
+        "login": "opencode mcp auth starrykit（或首次调用时自动触发 OAuth）",
+        "update": "重新同步 skill 目录；MCP 配置无需变更",
+        "uninstall": "opencode mcp logout starrykit；移除 opencode.json 中的 mcp.starrykit 与 skill 目录"
+      },
+      "limitations": [
+        "最低版本未知",
+        "官方文档未标注远程 transport 的 MCP protocol 版本",
+        "opencode.json 已固定连接 Production endpoint https://mcp.starrykit.com/mcp"
+      ],
+      "sources": [
+        "https://opencode.ai/docs/skills/",
+        "https://opencode.ai/docs/mcp-servers/",
+        "https://opencode.ai/docs/config/"
+      ]
+    },
+    {
+      "id": "generic",
+      "displayName": "其他兼容 Agent（通用手动接入）",
+      "kind": "generic",
+      "tier": "C",
+      "status": "manual",
+      "verification": { "stageDogfood": "not-applicable", "trackingIssue": 959 },
+      "adapterPath": "hosts/generic/",
+      "minVersion": "unknown",
+      "skill": {
+        "discovery": "rules-reference",
+        "installScopes": [],
+        "installPaths": [
+          "宿主支持 Agent Skills 时安装 canonical skill 目录；否则在 rules/AGENTS 中引用 canonical SKILL.md 位置，不复制内容"
+        ]
+      },
+      "mcp": {
+        "connection": "manual",
+        "transports": ["streamable-http"],
+        "protocolEras": { "2025-06-18": "unknown", "2026-07-28": "unknown" },
+        "oauth": {
+          "flow": "manual",
+          "dynamicClientRegistration": "unknown",
+          "pkce": "unknown"
+        },
+        "tokenStorage": "宿主自身机制"
+      },
+      "lifecycle": {
+        "install": "按 hosts/generic/README.md 将任意标准 MCP client 指向 $STARRYKIT_MCP_URL",
+        "login": "宿主自身的 MCP OAuth 流程（RFC 9728 发现 + RFC 7591 DCR + PKCE S256）",
+        "update": "无宿主专属产物，跟随宿主自身机制",
+        "uninstall": "移除宿主配置；在 StarryKit 设置中撤销授权"
+      },
+      "limitations": [
+        "未 dogfood 的宿主不承诺为正式支持",
+        "缺少 Agent Skills 的宿主只有裸工具接入，没有 canonical 工作流指引",
+        "宿主不支持 DCR 时需先手动调用 registration endpoint 注册 public client"
+      ],
+      "sources": [
+        "https://modelcontextprotocol.io/specification/2025-06-18",
+        "https://www.rfc-editor.org/rfc/rfc7591",
+        "https://www.rfc-editor.org/rfc/rfc9728"
+      ]
+    }
+  ]
+}
