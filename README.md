@@ -50,7 +50,7 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 
 Each request produces an editable StarryKit result you can review and continue refining.
 
-### Prompt → Showcase
+### Prompt
 
 | Prompt | Showcase |
 | --- | --- |
@@ -59,10 +59,11 @@ Each request produces an editable StarryKit result you can review and continue r
 
 ### More from the Gallery
 
-| | |
-| --- | --- |
-| <img src="assets/demos/gallery-orbit-drop-01.webp" alt="Bold product campaign graphic created with StarryKit" width="420" /> | <img src="assets/demos/gallery-type-index.webp" alt="Typography education carousel created with StarryKit" width="420" /> |
-| <img src="assets/demos/gallery-afterlight-2026.webp" alt="Nocturnal garden festival poster created with StarryKit" width="420" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="Rain garden infographic created with StarryKit" width="420" /> |
+| Presentation | Web | UI |
+| :---: | :---: | :---: |
+| <img src="assets/demos/gallery-noon-loop.webp" alt="Editorial presentation created with StarryKit" width="280" /> | <img src="assets/demos/gallery-noriform.webp" alt="Sustainable materials website created with StarryKit" width="280" /> | <img src="assets/demos/gallery-dark-telemetry.webp" alt="Dark operations dashboard created with StarryKit" width="280" /> |
+| **Poster** | **Social** | **Infographic** |
+| <img src="assets/demos/gallery-afterlight-2026.webp" alt="Nocturnal garden festival poster created with StarryKit" width="280" /> | <img src="assets/demos/gallery-make-one-metre-wild.webp" alt="Bright social campaign graphic created with StarryKit" width="280" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="Rain garden infographic created with StarryKit" width="280" /> |
 
 You can also ask StarryKit to inspect an existing document, tighten its story, redesign one page, reorder content, or export selected pages.
 

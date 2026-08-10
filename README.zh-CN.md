@@ -50,7 +50,7 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 每一个请求都会得到一份可在 StarryKit 中审核、编辑和继续优化的结果。
 
-### Prompt → Showcase
+### Prompt
 
 | Prompt | Showcase |
 | --- | --- |
@@ -59,10 +59,11 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 ### 更多 Gallery 作品
 
-| | |
-| --- | --- |
-| <img src="assets/demos/gallery-orbit-drop-01.webp" alt="使用 StarryKit 创建的产品社交 Campaign" width="420" /> | <img src="assets/demos/gallery-type-index.webp" alt="使用 StarryKit 创建的字体知识轮播图" width="420" /> |
-| <img src="assets/demos/gallery-afterlight-2026.webp" alt="使用 StarryKit 创建的夜间花园节海报" width="420" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="使用 StarryKit 创建的雨水花园信息图" width="420" /> |
+| Presentation | Web | UI |
+| :---: | :---: | :---: |
+| <img src="assets/demos/gallery-noon-loop.webp" alt="使用 StarryKit 创建的编辑风格演示文稿" width="280" /> | <img src="assets/demos/gallery-noriform.webp" alt="使用 StarryKit 创建的可持续材料网站" width="280" /> | <img src="assets/demos/gallery-dark-telemetry.webp" alt="使用 StarryKit 创建的深色运营 Dashboard" width="280" /> |
+| **Poster** | **Social** | **Infographic** |
+| <img src="assets/demos/gallery-afterlight-2026.webp" alt="使用 StarryKit 创建的夜间花园节海报" width="280" /> | <img src="assets/demos/gallery-make-one-metre-wild.webp" alt="使用 StarryKit 创建的高饱和社交 Campaign" width="280" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="使用 StarryKit 创建的雨水花园信息图" width="280" /> |
 
 你也可以让 StarryKit 检查已有文档、收紧叙事、重新设计某一页、调整页面顺序，或者只导出指定页面。
 

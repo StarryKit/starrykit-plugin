@@ -102,9 +102,11 @@ describe("plugin bundle", () => {
       "assets/demos/event-design.gif",
       "assets/demos/gallery-morrow-formworks.webp",
       "assets/demos/gallery-relay-one.webp",
-      "assets/demos/gallery-orbit-drop-01.webp",
-      "assets/demos/gallery-type-index.webp",
+      "assets/demos/gallery-noon-loop.webp",
+      "assets/demos/gallery-noriform.webp",
+      "assets/demos/gallery-dark-telemetry.webp",
       "assets/demos/gallery-afterlight-2026.webp",
+      "assets/demos/gallery-make-one-metre-wild.webp",
       "assets/demos/gallery-where-the-rain-goes.webp",
     ]) {
       assert.ok([".svg", ".webp", ".gif"].includes(extname(asset)));
