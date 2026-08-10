@@ -67,8 +67,8 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 | --- | --- |
 | ✏️ 完整可编辑 | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
 | 📤 完美导出 | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
-| 💡 [Prompt Library](https://starrykit.com/explore) | 浏览可以直接使用的 Prompt 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
+| 💡 1000+ Prompts | 浏览 [1,000+ 个可以直接使用的 Prompt](https://starrykit.com/explore) 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
 
-仓库维护者可以阅读 [development.md](docs/development.md)，了解 CI workflow 与测试实际覆盖和不覆盖的内容。
+---
 
 <sub>历史说明：这个仓库过去用于 Starry Slides。最终源码快照仍保存在 <a href="https://github.com/StarryKit/starrykit-plugin/tree/archive/starry-slides-v0.1.38">archive/starry-slides-v0.1.38</a> 分支。</sub>

@@ -67,8 +67,8 @@ You can also ask StarryKit to inspect an existing document, tighten its story, r
 | --- | --- |
 | ✏️ Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
 | 📤 Perfect export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
-| 💡 [Prompt Library](https://starrykit.com/explore) | Explore ready-to-use prompts and visual ideas, then open one in StarryKit to make it your own. |
+| 💡 1000+ Prompts | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
 
-For maintainers, [development.md](docs/development.md) explains the repository checks and what the CI workflow does—and does not—test.
+---
 
 <sub>Historical note: this repository previously hosted Starry Slides. Its final source snapshot remains available on the <a href="https://github.com/StarryKit/starrykit-plugin/tree/archive/starry-slides-v0.1.38">archive/starry-slides-v0.1.38</a> branch.</sub>
