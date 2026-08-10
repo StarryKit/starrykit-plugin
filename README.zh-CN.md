@@ -52,18 +52,39 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 ### Prompt
 
+#### Presentation
+
 | Prompt | Showcase |
 | --- | --- |
 | **产品目录**<br><br>“为一组模块化吸音产品制作一份六页发布目录，要有编辑感、材质感，并且能够清楚呈现产品规格。” | <img src="assets/demos/gallery-morrow-formworks.webp" alt="使用 StarryKit 创建的编辑风格产品目录" width="520" /> |
 | **技术发布**<br><br>“把这份事故响应 Brief 做成一份高对比度发布 Deck，围绕一个核心证据展开：11 分钟内定位根因。” | <img src="assets/demos/gallery-relay-one.webp" alt="使用 StarryKit 创建的高对比度技术发布 Deck" width="520" /> |
+| **策略提案**<br><br>“为一项为期 90 天的遮阳试点制作高管策略 Deck。整体温暖、有编辑感，并围绕一个清晰的公共空间成果展开。” | <img src="assets/demos/gallery-noon-loop.webp" alt="使用 StarryKit 创建的温暖编辑风格策略 Deck" width="520" /> |
+
+#### Poster
+
+| Prompt | Showcase |
+| --- | --- |
+| **开放工作室**<br><br>“为开放工作室之夜制作一张鲜明的黑白海报，让未完成作品显得有意图、有质感，也更有邀请感。” | <img src="assets/demos/gallery-poster-unfinished.webp" alt="使用 StarryKit 创建的黑白开放工作室海报" width="520" /> |
+| **AI 峰会**<br><br>“为一场以人为本的 AI 峰会设计未来感活动海报，用精确排版搭配具有氛围感的信号视觉。” | <img src="assets/demos/gallery-poster-vector-shift.webp" alt="使用 StarryKit 创建的未来感 AI 峰会海报" width="520" /> |
+| **产品展示**<br><br>“把这份四件产品 Brief 做成周末工具展的简洁目录海报，让价格和活动信息一眼就能看清。” | <img src="assets/demos/gallery-poster-orbit-04.webp" alt="使用 StarryKit 创建的极简产品展示海报" width="520" /> |
+
+#### Social Media
+
+| Prompt | Showcase |
+| --- | --- |
+| **产品发布**<br><br>“为一组模块化桌面配件制作大胆的社交媒体发布图，加入编号式标注和高饱和配色。” | <img src="assets/demos/gallery-social-orbit-drop-01.webp" alt="使用 StarryKit 创建的产品发布社交图片" width="520" /> |
+| **知识轮播图**<br><br>“设计一组简洁的社交媒体轮播图，讲清楚每位设计师都应该了解的六种字体风格。” | <img src="assets/demos/gallery-social-type-index.webp" alt="使用 StarryKit 创建的字体知识轮播图" width="520" /> |
+| **观点传播**<br><br>“为一份关于五个产品策略弱信号的报告制作一张高冲击力社交媒体图片。” | <img src="assets/demos/gallery-social-weak-signals.webp" alt="使用 StarryKit 创建的观点传播社交图片" width="520" /> |
 
 ### 更多 Gallery 作品
 
-| Presentation | Web | UI |
+| Web | UI | Diagram |
 | :---: | :---: | :---: |
-| <img src="assets/demos/gallery-noon-loop.webp" alt="使用 StarryKit 创建的编辑风格演示文稿" width="280" /> | <img src="assets/demos/gallery-noriform.webp" alt="使用 StarryKit 创建的可持续材料网站" width="280" /> | <img src="assets/demos/gallery-dark-telemetry.webp" alt="使用 StarryKit 创建的深色运营 Dashboard" width="280" /> |
-| **Poster** | **Social** | **Infographic** |
-| <img src="assets/demos/gallery-afterlight-2026.webp" alt="使用 StarryKit 创建的夜间花园节海报" width="280" /> | <img src="assets/demos/gallery-make-one-metre-wild.webp" alt="使用 StarryKit 创建的高饱和社交 Campaign" width="280" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="使用 StarryKit 创建的雨水花园信息图" width="280" /> |
+| <img src="assets/demos/gallery-noriform.webp" alt="使用 StarryKit 创建的可持续材料网站" width="280" /> | <img src="assets/demos/gallery-dark-telemetry.webp" alt="使用 StarryKit 创建的深色运营 Dashboard" width="280" /> | <img src="assets/demos/gallery-diagram-event-delivery.webp" alt="使用 StarryKit 创建的事件交付模式图" width="280" /> |
+| **Web** | **UI** | **Card** |
+| <img src="assets/demos/gallery-web-loop-01.webp" alt="使用 StarryKit 创建的产品发布网站" width="280" /> | <img src="assets/demos/gallery-ui-data-canvas.webp" alt="使用 StarryKit 创建的浅色数据工作区 UI" width="280" /> | <img src="assets/demos/gallery-card-years-look-good.webp" alt="使用 StarryKit 创建的编辑风格生日卡片" width="280" /> |
+| **Infographic** | **Email** | **Email** |
+| <img src="assets/demos/gallery-infographic-reform.webp" alt="使用 StarryKit 创建的循环材料信息图" width="280" /> | <img src="assets/demos/gallery-email-green-hour.webp" alt="使用 StarryKit 创建的编辑风格产品邮件" width="280" /> | <img src="assets/demos/gallery-email-groundwell.webp" alt="使用 StarryKit 创建的数据型 Field Note 邮件" width="280" /> |
 
 你也可以让 StarryKit 检查已有文档、收紧叙事、重新设计某一页、调整页面顺序，或者只导出指定页面。
 
