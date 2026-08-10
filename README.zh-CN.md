@@ -42,8 +42,6 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 ![StarryKit 创建并编辑公路旅行演示文稿](assets/demos/roadtrip-editing.gif)
 
-<p align="center"><a href="assets/demos/roadtrip-editing.mp4">观看高清演示文稿 Demo</a></p>
-
 ### 手动编辑和导出
 
 ![StarryKit 创建可编辑活动海报](assets/demos/event-design.gif)
@@ -52,10 +50,19 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 每一个请求都会得到一份可在 StarryKit 中审核、编辑和继续优化的结果。
 
+### Prompt → Showcase
+
 | Prompt | Showcase |
 | --- | --- |
-| **演示文稿**<br><br>“帮我做一份五页的公路旅行 Deck。整体乐观、有编辑感、以图片为主，每一页只表达一个核心观点。” | <img src="assets/demos/roadtrip-editing-poster.webp" alt="StarryKit 中可编辑的公路旅行演示文稿" width="520" /> |
-| **海报**<br><br>“把这份活动 Brief 做成一张大胆、可编辑的社交媒体竖版海报，然后导出 PNG。” | <img src="assets/demos/event-design-poster.webp" alt="StarryKit 中可编辑的活动海报" width="520" /> |
+| **产品目录**<br><br>“为一组模块化吸音产品制作一份六页发布目录，要有编辑感、材质感，并且能够清楚呈现产品规格。” | <img src="assets/demos/gallery-morrow-formworks.webp" alt="使用 StarryKit 创建的编辑风格产品目录" width="520" /> |
+| **技术发布**<br><br>“把这份事故响应 Brief 做成一份高对比度发布 Deck，围绕一个核心证据展开：11 分钟内定位根因。” | <img src="assets/demos/gallery-relay-one.webp" alt="使用 StarryKit 创建的高对比度技术发布 Deck" width="520" /> |
+
+### 更多 Gallery 作品
+
+| | |
+| --- | --- |
+| <img src="assets/demos/gallery-orbit-drop-01.webp" alt="使用 StarryKit 创建的产品社交 Campaign" width="420" /> | <img src="assets/demos/gallery-type-index.webp" alt="使用 StarryKit 创建的字体知识轮播图" width="420" /> |
+| <img src="assets/demos/gallery-afterlight-2026.webp" alt="使用 StarryKit 创建的夜间花园节海报" width="420" /> | <img src="assets/demos/gallery-where-the-rain-goes.webp" alt="使用 StarryKit 创建的雨水花园信息图" width="420" /> |
 
 你也可以让 StarryKit 检查已有文档、收紧叙事、重新设计某一页、调整页面顺序，或者只导出指定页面。
 
