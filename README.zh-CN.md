@@ -11,86 +11,77 @@
 <p align="center">
   <a href="README.md">English</a> ·
   <a href="#安装">安装</a> ·
+  <a href="#看看实际效果">效果展示</a> ·
   <a href="#使用方法">使用方法</a> ·
-  <a href="#看看实际效果">演示</a> ·
+  <a href="#关键指标">关键指标</a> ·
+  <a href="#功能">功能</a> ·
   <a href="#手动安装">手动安装</a> ·
   <a href="https://starrykit.com">官方网站</a>
 </p>
 
-StarryKit Plugin 为 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等兼容 Agent 提供统一的视觉创作工作流。你只需描述想讲的故事，Agent 就可以通过 StarryKit Hosted MCP 创建文档、设计页面、优化已有作品并导出最终成果。
+StarryKit 让你的 AI Agent 直接拥有视觉创作能力：
 
-所有结果在 StarryKit 中保持可编辑。文档归你所有，页面草稿由你审核，最终版本也由你决定。
+- ✨ 从一句 Prompt 开始，完成演示文稿、海报或社交媒体图片。
+- 🎨 所有页面保持完整可编辑，每一份草稿都可以在 StarryKit 中审核。
+- 🔌 一套 Skill 与 Hosted MCP，同时支持 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等宿主。
 
 ## 安装
 
-把这一段话发送给你的 Agent：
+把这一段发送给你的 Agent：
 
 ```text
-请从 https://github.com/StarryKit/starrykit-plugin 安装 StarryKit Plugin。
-为当前宿主配置其中的 Skill 和 https://mcp.starrykit.com/mcp。
-完成浏览器 OAuth，然后通过列出我有权访问的 StarryKit 文档来验证连接。
-如果需要手动操作，请使用 docs/ 中对应的指南。不要向我索要 token。
+请为当前 Agent 配置 StarryKit。
+Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g -y
+MCP: https://mcp.starrykit.com/mcp
 ```
 
-需要手动安装时，请在[手动安装](#手动安装)中选择对应宿主。
-
-## 使用方法
-
-安装完成后，直接描述你想要的视觉结果。StarryKit 既可以创建新文档，也可以针对已有文档完成精确修改：
-
-```text
-帮我做一份五页的 AI 旅行规划产品 Pitch Deck。整体乐观、有编辑感、
-以图片为主，每一页只表达一个核心观点。
-```
-
-```text
-打开我最近的产品发布 Deck，收紧叙事，并重新设计那张过于拥挤的对比页，
-但不要改变任何事实和结论。
-```
-
-```text
-把这份活动 Brief 做成一张可编辑的竖版海报，然后导出 PNG。
-```
+Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作时，请在[手动安装](#手动安装)中选择对应宿主。
 
 ## 看看实际效果
 
-### 从零创作并持续优化一份完整演示文稿
+### 创建并持续优化一份完整演示文稿
 
-Agent 可以组织叙事、确定视觉系统、创作每一页，并在同一份可编辑文档里继续迭代。
+![StarryKit 创建并编辑公路旅行演示文稿](assets/demos/roadtrip-editing.gif)
 
-[![观看 StarryKit 创作并编辑公路旅行演示文稿](assets/demos/roadtrip-editing-poster.webp)](assets/demos/roadtrip-editing.mp4)
+<p align="center"><a href="assets/demos/roadtrip-editing.mp4">观看高清演示文稿 Demo</a></p>
 
-<p align="center"><a href="assets/demos/roadtrip-editing.mp4">观看演示文稿 Demo</a></p>
+### 创建一张可编辑的活动视觉
 
-### 创作可编辑的营销与活动视觉
+![StarryKit 创建可编辑活动海报](assets/demos/event-design.gif)
 
-同一套工作流也适用于海报、社交媒体图片、邀请函等画布式设计，并不局限于 Slides。
+<p align="center"><a href="assets/demos/event-design.mp4">观看高清活动视觉 Demo</a></p>
 
-[![观看 StarryKit 创作可编辑的活动视觉](assets/demos/event-design-poster.webp)](assets/demos/event-design.mp4)
+## 使用方法
 
-<p align="center"><a href="assets/demos/event-design.mp4">观看活动视觉 Demo</a></p>
+每一个请求都会得到一份可在 StarryKit 中审核、编辑和继续优化的结果。
 
-## Agent 可以做什么
+| Prompt | Showcase |
+| --- | --- |
+| **演示文稿**<br><br>“帮我做一份五页的公路旅行 Deck。整体乐观、有编辑感、以图片为主，每一页只表达一个核心观点。” | <img src="assets/demos/roadtrip-editing-poster.webp" alt="StarryKit 中可编辑的公路旅行演示文稿" width="520" /> |
+| **海报**<br><br>“把这份活动 Brief 做成一张大胆、可编辑的社交媒体竖版海报，然后导出 PNG。” | <img src="assets/demos/event-design-poster.webp" alt="StarryKit 中可编辑的活动海报" width="520" /> |
 
-- 创建演示文稿、海报、社交媒体图片和其他可编辑视觉文档。
-- 浏览你授权的 StarryKit 文档与文件夹。
-- 读取页面内容、查看预览并完成局部视觉修改。
-- 新增、重写、移动页面以及修改标题，同时保留文档结构。
-- 将完整文档或指定页面导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。
-- 把每一张新生成的页面作为 StarryKit 中可审核的草稿交给你决定。
+你也可以让 StarryKit 检查已有文档、收紧叙事、重新设计某一页、调整页面顺序，或者只导出指定页面。
 
-## 工作原理
+## 关键指标
 
-Plugin 由两个部分组成：
+| ⚡ 一句 Prompt 安装 | 🧰 14 个 MCP 工具 | 📤 7 种导出格式 | 🔐 浏览器 OAuth |
+| --- | --- | --- | --- |
+| 同时配置 Skill 与 MCP | 读取、创作、预览与导出 | PPTX、PDF、SVG、PNG、JPEG、HTML、Google Slides | 无需粘贴 access token |
 
-- **StarryKit Authoring Skill** 教 Agent 以设计总监的方式思考，写出明确的单页设计 Brief，选择正确的创作工具，并避免常见的 AI 模板化设计。
-- **StarryKit Hosted MCP** 提供实时工具，用来读取、创建、编辑、预览和导出你已授权的 StarryKit 文档。
+## 功能
 
-认证通过浏览器 OAuth 完成。不要在聊天或配置文件中粘贴 access token、client secret 或账号密码。Agent 只能访问你授权的 Workspace 或 Folder，你可以随时在 StarryKit 中撤销授权。
+| 功能 | Agent 可以做什么 |
+| --- | --- |
+| ✨ 视觉创作 | 创建演示文稿、海报、社交媒体图片、邀请函和其他可编辑设计。 |
+| 🔎 文档发现 | 只浏览你已经授权的 StarryKit 文档与文件夹。 |
+| 🎨 设计指导 | 建立清晰的信息层级、有意图的构图和针对每一页的视觉方向。 |
+| 🛠 精确修改 | 读取内容与预览，然后编辑、重写、改标题或移动正确的页面。 |
+| ✅ 草稿审核 | 每一张生成页面都交回 StarryKit，由你审核并决定是否采用。 |
+| 📤 灵活导出 | 将完整文档或指定页面导出为七种支持格式。 |
 
 ## 手动安装
 
-推荐优先使用上面的一句话安装方式。如果 Agent 无法自动完成某一步，请查看对应宿主的中英文手动指南：
+如果 Agent 无法自动完成安装，请查看对应宿主的中英文指南：
 
 | 宿主 | 中文 | English |
 | --- | --- | --- |

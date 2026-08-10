@@ -11,86 +11,77 @@
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
   <a href="#install">Install</a> ·
-  <a href="#usage">Usage</a> ·
   <a href="#see-it-in-action">Demos</a> ·
+  <a href="#usage">Usage</a> ·
+  <a href="#metrics">Metrics</a> ·
+  <a href="#features">Features</a> ·
   <a href="#manual-setup">Manual setup</a> ·
   <a href="https://starrykit.com">Website</a>
 </p>
 
-StarryKit Plugin gives Codex, Claude Code, Cursor, OpenCode, OpenClaw, and other compatible agents a shared visual-authoring workflow. Describe the story you want to tell; your agent can create a StarryKit document, compose its pages, refine existing designs, and export the result through StarryKit's hosted MCP service.
+StarryKit turns your AI agent into a visual co-creator:
 
-The result stays editable in StarryKit. You keep control of the document, the review process, and the final export.
+- ✨ Go from a prompt to a polished presentation, poster, or social graphic.
+- 🎨 Keep every page fully editable and review each draft in StarryKit.
+- 🔌 Use one shared Skill and Hosted MCP across Codex, Claude Code, Cursor, OpenCode, OpenClaw, and more.
 
 ## Install
 
-Send one prompt to your agent:
+Send this to your agent:
 
 ```text
-Install the StarryKit Plugin from https://github.com/StarryKit/starrykit-plugin.
-Set up its Skill and https://mcp.starrykit.com/mcp for this host.
-Complete browser OAuth, then verify by listing my accessible StarryKit documents.
-Use the matching docs/ guide if manual steps are needed. Never ask me for a token.
+Set up StarryKit for this agent.
+Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit-authoring -g -y
+MCP: https://mcp.starrykit.com/mcp
 ```
 
-For manual installation, choose your host in [Manual setup](#manual-setup).
-
-## Usage
-
-After installation, describe the visual outcome you want. StarryKit works for new documents and focused edits to existing ones:
-
-```text
-Create a five-page pitch deck for an AI travel planner. Make it optimistic,
-editorial, and image-led, with one clear idea per page.
-```
-
-```text
-Open my latest product launch deck, tighten the story, and redesign the crowded
-comparison page without changing the underlying claims.
-```
-
-```text
-Turn this event brief into an editable portrait poster, then export a PNG.
-```
+Your agent installs the Skill, configures the MCP, and opens browser OAuth. For manual installation, choose your host in [Manual setup](#manual-setup).
 
 ## See it in action
 
-### Build and refine a complete presentation
+### Create and refine a complete presentation
 
-Create a narrative, direct the visual system, author every page, and continue refining the editable result with your agent.
+![StarryKit creating and editing a road-trip presentation](assets/demos/roadtrip-editing.gif)
 
-[![Watch StarryKit create and edit a road-trip presentation](assets/demos/roadtrip-editing-poster.webp)](assets/demos/roadtrip-editing.mp4)
+<p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the HD presentation demo</a></p>
 
-<p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the presentation demo</a></p>
+### Create an editable event design
 
-### Create editable campaign and event graphics
+![StarryKit creating an editable event poster](assets/demos/event-design.gif)
 
-Use the same workflow for posters, social graphics, invitations, and other canvas-based designs—not just slide decks.
+<p align="center"><a href="assets/demos/event-design.mp4">Watch the HD event-design demo</a></p>
 
-[![Watch StarryKit create an editable event design](assets/demos/event-design-poster.webp)](assets/demos/event-design.mp4)
+## Usage
 
-<p align="center"><a href="assets/demos/event-design.mp4">Watch the event-design demo</a></p>
+Each request produces an editable StarryKit result you can review and continue refining.
 
-## What your agent can do
+| Prompt | Showcase |
+| --- | --- |
+| **Presentation**<br><br>“Create a five-page road-trip deck. Make it optimistic, editorial, and image-led, with one clear idea per page.” | <img src="assets/demos/roadtrip-editing-poster.webp" alt="Editable road-trip presentation in StarryKit" width="520" /> |
+| **Poster**<br><br>“Turn this event brief into a bold, editable portrait poster for social media, then export a PNG.” | <img src="assets/demos/event-design-poster.webp" alt="Editable event poster in StarryKit" width="520" /> |
 
-- Create presentations, posters, social graphics, and other editable visual documents.
-- Browse the StarryKit documents and folders you have authorized.
-- Read page content, inspect previews, and make focused visual edits.
-- Add, rewrite, reorder, and retitle pages while preserving document structure.
-- Export selected pages or complete documents as PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides.
-- Hand every generated page back to you as a reviewable draft in StarryKit.
+You can also ask StarryKit to inspect an existing document, tighten its story, redesign one page, reorder content, or export selected pages.
 
-## How it works
+## Metrics
 
-The Plugin combines two pieces:
+| ⚡ 1 prompt install | 🧰 14 MCP tools | 📤 7 export formats | 🔐 Browser OAuth |
+| --- | --- | --- | --- |
+| Skill + MCP setup | Read, author, preview, and export | PPTX, PDF, SVG, PNG, JPEG, HTML, Google Slides | No pasted access tokens |
 
-- The **StarryKit Authoring Skill** teaches your agent how to think like a design director, write precise page briefs, use the right authoring tool, and avoid generic AI-generated layouts.
-- The **StarryKit Hosted MCP** provides the live tools that read, create, edit, preview, and export authorized StarryKit documents.
+## Features
 
-Authentication happens through OAuth in your browser. Do not paste access tokens, client secrets, or account credentials into chat or configuration. Your agent can only access the workspace or folders you authorize, and you can revoke that access in StarryKit.
+| Feature | What your agent can do |
+| --- | --- |
+| ✨ Visual creation | Create presentations, posters, social graphics, invitations, and other editable designs. |
+| 🔎 Document discovery | Browse only the StarryKit documents and folders you authorize. |
+| 🎨 Design direction | Apply clear hierarchy, intentional composition, and page-specific art direction. |
+| 🛠 Focused editing | Read content and previews, then edit, rewrite, retitle, or reorder the right page. |
+| ✅ Reviewable drafts | Hand every generated page back to you for review inside StarryKit. |
+| 📤 Flexible export | Export a complete document or selected pages in seven supported formats. |
 
 ## Manual setup
 
-The one-prompt installation above is recommended. If your agent cannot complete a step automatically, use the bilingual manual guide for your host:
+If your agent cannot complete installation automatically, use the bilingual guide for your host:
 
 | Host | English | 中文 |
 | --- | --- | --- |

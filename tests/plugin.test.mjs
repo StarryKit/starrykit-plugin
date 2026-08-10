@@ -114,11 +114,13 @@ describe("plugin bundle", () => {
     for (const asset of [
       "assets/brand/starrykit-wordmark-on-purple.svg",
       "assets/demos/roadtrip-editing-poster.webp",
+      "assets/demos/roadtrip-editing.gif",
       "assets/demos/roadtrip-editing.mp4",
       "assets/demos/event-design-poster.webp",
+      "assets/demos/event-design.gif",
       "assets/demos/event-design.mp4",
     ]) {
-      assert.ok([".svg", ".webp", ".mp4"].includes(extname(asset)));
+      assert.ok([".svg", ".webp", ".gif", ".mp4"].includes(extname(asset)));
       assert.ok(existsSync(resolve(ROOT, asset)), `${asset} is missing`);
     }
   });
