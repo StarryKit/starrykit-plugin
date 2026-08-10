@@ -38,17 +38,15 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 
 ## See it in action
 
-### Create and refine a complete presentation
+### Create and Refine with AI
 
 ![StarryKit creating and editing a road-trip presentation](assets/demos/roadtrip-editing.gif)
 
 <p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the HD presentation demo</a></p>
 
-### Create an editable event design
+### Edit Manually and Export
 
 ![StarryKit creating an editable event poster](assets/demos/event-design.gif)
-
-<p align="center"><a href="assets/demos/event-design.mp4">Watch the HD event-design demo</a></p>
 
 ## Usage
 
@@ -65,9 +63,9 @@ You can also ask StarryKit to inspect an existing document, tighten its story, r
 
 | Feature | What it means |
 | --- | --- |
-| ✏️ Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
-| 📤 Perfect export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
-| 💡 1000+ Prompts | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
+| ✏️&nbsp;Editable | Every design stays editable in StarryKit—from individual elements to complete pages. |
+| 📤&nbsp;Perfect&nbsp;export | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
+| 💡&nbsp;1000+&nbsp;Prompts | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
 
 ---
 

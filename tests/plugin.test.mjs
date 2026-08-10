@@ -103,7 +103,6 @@ describe("plugin bundle", () => {
       "assets/demos/roadtrip-editing.mp4",
       "assets/demos/event-design-poster.webp",
       "assets/demos/event-design.gif",
-      "assets/demos/event-design.mp4",
     ]) {
       assert.ok([".svg", ".webp", ".gif", ".mp4"].includes(extname(asset)));
       assert.ok(existsSync(resolve(ROOT, asset)), `${asset} is missing`);

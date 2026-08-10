@@ -38,17 +38,15 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 ## 看看实际效果
 
-### 创建并持续优化一份完整演示文稿
+### 用 AI 创建和优化
 
 ![StarryKit 创建并编辑公路旅行演示文稿](assets/demos/roadtrip-editing.gif)
 
 <p align="center"><a href="assets/demos/roadtrip-editing.mp4">观看高清演示文稿 Demo</a></p>
 
-### 创建一张可编辑的活动视觉
+### 手动编辑和导出
 
 ![StarryKit 创建可编辑活动海报](assets/demos/event-design.gif)
-
-<p align="center"><a href="assets/demos/event-design.mp4">观看高清活动视觉 Demo</a></p>
 
 ## 使用方法
 
@@ -65,9 +63,9 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 | 功能 | 说明 |
 | --- | --- |
-| ✏️ 完整可编辑 | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
-| 📤 完美导出 | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
-| 💡 1000+ Prompts | 浏览 [1,000+ 个可以直接使用的 Prompt](https://starrykit.com/explore) 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
+| ✏️&nbsp;完整可编辑 | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
+| 📤&nbsp;完美导出 | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
+| 💡&nbsp;1000+&nbsp;Prompts | 浏览 [1,000+ 个可以直接使用的 Prompt](https://starrykit.com/explore) 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
 
 ---
 
