@@ -38,17 +38,15 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 
 ## See it in action
 
-### Create and refine a complete presentation
+### Create and Refine with AI
 
 ![StarryKit creating and editing a road-trip presentation](assets/demos/roadtrip-editing.gif)
 
 <p align="center"><a href="assets/demos/roadtrip-editing.mp4">Watch the HD presentation demo</a></p>
 
-### Create an editable event design
+### Edit Manually and Export
 
 ![StarryKit creating an editable event poster](assets/demos/event-design.gif)
-
-<p align="center"><a href="assets/demos/event-design.mp4">Watch the HD event-design demo</a></p>
 
 ## Usage
 

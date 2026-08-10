@@ -38,17 +38,15 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 
 ## 看看实际效果
 
-### 创建并持续优化一份完整演示文稿
+### 用 AI 创建和优化
 
 ![StarryKit 创建并编辑公路旅行演示文稿](assets/demos/roadtrip-editing.gif)
 
 <p align="center"><a href="assets/demos/roadtrip-editing.mp4">观看高清演示文稿 Demo</a></p>
 
-### 创建一张可编辑的活动视觉
+### 手动编辑和导出
 
 ![StarryKit 创建可编辑活动海报](assets/demos/event-design.gif)
-
-<p align="center"><a href="assets/demos/event-design.mp4">观看高清活动视觉 Demo</a></p>
 
 ## 使用方法
 
