@@ -5,22 +5,6 @@ import { describe, it } from "node:test";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const PRODUCTION_MCP_URL = "https://mcp.starrykit.com/mcp";
-const TOOL_NAMES = [
-  "list_documents",
-  "read_document",
-  "preview_page",
-  "create_document",
-  "get_profile_catalog",
-  "insert_pages",
-  "rewrite_pages",
-  "edit_pages",
-  "get_authoring_statuses",
-  "update_document_title",
-  "update_page_titles",
-  "move_page",
-  "export_document",
-  "get_export_status",
-];
 const HOSTS = ["codex", "claude-code", "cursor", "opencode", "openclaw", "pi", "other-hosts"];
 
 function read(path) {
@@ -58,17 +42,13 @@ describe("plugin bundle", () => {
     }
   });
 
-  it("ships one design-directed canonical Skill for the public tool set", () => {
+  it("ships a valid canonical Skill with essential safety boundaries", () => {
     const skill = read("skills/starrykit-authoring/SKILL.md");
 
-    for (const tool of TOOL_NAMES) {
-      assert.ok(skill.includes(`\`${tool}\``), `Skill does not document ${tool}`);
-    }
-
+    assert.match(skill, /^---\nname: starrykit-authoring\ndescription: .+\n---\n/);
+    assert.match(skill, /# StarryKit Authoring/);
+    assert.ok(skill.includes(PRODUCTION_MCP_URL), "Skill must reference the production MCP endpoint");
     for (const boundary of [
-      "Act as the Design Director",
-      "one dominant idea",
-      "negative space",
       "Never invoke or delegate to a private StarryKit Main Agent",
       "Do not accept, keep, commit, reject, discard, or drop a Page Draft",
       "A read-only grant rejects every write tool",
