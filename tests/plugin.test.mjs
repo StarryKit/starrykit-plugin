@@ -112,7 +112,7 @@ describe("plugin bundle", () => {
     }
 
     for (const asset of [
-      "assets/brand/starrykit-wordmark.svg",
+      "assets/brand/starrykit-wordmark-on-purple.svg",
       "assets/demos/roadtrip-editing-poster.webp",
       "assets/demos/roadtrip-editing.mp4",
       "assets/demos/event-design-poster.webp",

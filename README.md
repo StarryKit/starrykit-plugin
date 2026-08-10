@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/brand/starrykit-wordmark.svg" alt="StarryKit" width="420" />
+  <img src="assets/brand/starrykit-wordmark-on-purple.svg" alt="StarryKit" width="360" />
 </p>
 
 <h1 align="center">StarryKit Plugin</h1>
@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
-  <a href="#install-with-one-prompt">Get started</a> ·
+  <a href="#install">Install</a> ·
+  <a href="#usage">Usage</a> ·
   <a href="#see-it-in-action">Demos</a> ·
   <a href="#manual-setup">Manual setup</a> ·
   <a href="https://starrykit.com">Website</a>
@@ -20,19 +21,22 @@ StarryKit Plugin gives Codex, Claude Code, Cursor, OpenCode, OpenClaw, and other
 
 The result stays editable in StarryKit. You keep control of the document, the review process, and the final export.
 
-## Install with one prompt
+## Install
 
-Send this prompt to your agent:
+Send one prompt to your agent:
 
 ```text
 Install the StarryKit Plugin from https://github.com/StarryKit/starrykit-plugin.
-Configure the StarryKit Hosted MCP server at https://mcp.starrykit.com/mcp,
-install the canonical skill from skills/starrykit-authoring for this agent host,
-complete OAuth, and verify the connection by listing my accessible StarryKit documents.
-Follow the host-specific guide in docs/ when needed. Never ask me to paste an access token.
+Set up its Skill and https://mcp.starrykit.com/mcp for this host.
+Complete browser OAuth, then verify by listing my accessible StarryKit documents.
+Use the matching docs/ guide if manual steps are needed. Never ask me for a token.
 ```
 
-Your agent should detect its host, install the Skill, add the remote MCP connection, open StarryKit's browser-based OAuth flow, and verify the tools. After that, simply ask for an outcome:
+For manual installation, choose your host in [Manual setup](#manual-setup).
+
+## Usage
+
+After installation, describe the visual outcome you want. StarryKit works for new documents and focused edits to existing ones:
 
 ```text
 Create a five-page pitch deck for an AI travel planner. Make it optimistic,

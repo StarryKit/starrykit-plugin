@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/brand/starrykit-wordmark.svg" alt="StarryKit" width="420" />
+  <img src="assets/brand/starrykit-wordmark-on-purple.svg" alt="StarryKit" width="360" />
 </p>
 
 <h1 align="center">StarryKit Plugin</h1>
@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="README.md">English</a> ·
-  <a href="#用一句-prompt-完成安装">开始使用</a> ·
+  <a href="#安装">安装</a> ·
+  <a href="#使用方法">使用方法</a> ·
   <a href="#看看实际效果">演示</a> ·
   <a href="#手动安装">手动安装</a> ·
   <a href="https://starrykit.com">官方网站</a>
@@ -20,19 +21,22 @@ StarryKit Plugin 为 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等兼�
 
 所有结果在 StarryKit 中保持可编辑。文档归你所有，页面草稿由你审核，最终版本也由你决定。
 
-## 用一句 Prompt 完成安装
+## 安装
 
-把下面这段话发送给你的 Agent：
+把这一段话发送给你的 Agent：
 
 ```text
 请从 https://github.com/StarryKit/starrykit-plugin 安装 StarryKit Plugin。
-配置 https://mcp.starrykit.com/mcp 这个 StarryKit Hosted MCP，
-为当前 Agent 宿主安装 skills/starrykit-authoring 下的 canonical Skill，
-完成 OAuth，并通过列出我有权访问的 StarryKit 文档来验证连接。
-如果需要，请按 docs/ 下对应宿主的说明操作。不要让我在聊天中粘贴 access token。
+为当前宿主配置其中的 Skill 和 https://mcp.starrykit.com/mcp。
+完成浏览器 OAuth，然后通过列出我有权访问的 StarryKit 文档来验证连接。
+如果需要手动操作，请使用 docs/ 中对应的指南。不要向我索要 token。
 ```
 
-Agent 会识别当前宿主、安装 Skill、添加远程 MCP、打开 StarryKit 浏览器 OAuth，并验证工具是否可用。完成后，直接描述你想要的结果：
+需要手动安装时，请在[手动安装](#手动安装)中选择对应宿主。
+
+## 使用方法
+
+安装完成后，直接描述你想要的视觉结果。StarryKit 既可以创建新文档，也可以针对已有文档完成精确修改：
 
 ```text
 帮我做一份五页的 AI 旅行规划产品 Pitch Deck。整体乐观、有编辑感、
