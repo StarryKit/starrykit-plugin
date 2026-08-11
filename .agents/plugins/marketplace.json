@@ -1,0 +1,20 @@
+{
+  "name": "starrykit",
+  "interface": {
+    "displayName": "StarryKit"
+  },
+  "plugins": [
+    {
+      "name": "starrykit-plugin",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

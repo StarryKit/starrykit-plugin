@@ -19,13 +19,49 @@ describe("plugin bundle", () => {
   it("keeps the manifests aligned", () => {
     const codex = json(".codex-plugin/plugin.json");
     const claude = json(".claude-plugin/plugin.json");
+    const packageManifest = json("package.json");
 
     assert.equal(codex.name, "starrykit-plugin");
     assert.equal(claude.name, codex.name);
     assert.equal(claude.version, codex.version);
+    assert.equal(packageManifest.version, codex.version);
+    assert.equal(codex.interface.displayName, "StarryKit");
+    assert.equal(claude.displayName, "StarryKit");
+    assert.deepEqual(claude.author, codex.author);
+    assert.equal(claude.homepage, codex.homepage);
+    assert.equal(claude.repository, codex.repository);
     assert.equal(codex.license, "MIT");
     assert.equal(claude.license, "MIT");
     assert.equal(codex.mcpServers, "./.mcp.json");
+    assert.equal(claude.mcpServers, "./.mcp.json");
+    assert.equal(claude.skills, "./skills/");
+  });
+
+  it("provides concise Codex discovery metadata and starter prompts", () => {
+    const { interface: metadata } = json(".codex-plugin/plugin.json");
+
+    assert.ok(metadata.displayName.length <= 30);
+    assert.ok(metadata.shortDescription.length <= 30);
+    assert.ok(metadata.defaultPrompt.length > 0 && metadata.defaultPrompt.length <= 3);
+    for (const prompt of metadata.defaultPrompt) {
+      assert.ok(prompt.length <= 128, `default prompt is too long: ${prompt}`);
+    }
+    assert.equal(metadata.websiteURL, "https://starrykit.com");
+    assert.equal(metadata.privacyPolicyURL, "https://starrykit.com/privacy");
+    assert.equal(metadata.termsOfServiceURL, "https://starrykit.com/terms");
+  });
+
+  it("publishes installable Claude and Codex marketplace catalogs", () => {
+    const codexMarketplace = json(".agents/plugins/marketplace.json");
+    const claudeMarketplace = json(".claude-plugin/marketplace.json");
+
+    assert.equal(codexMarketplace.name, "starrykit");
+    assert.equal(claudeMarketplace.name, "starrykit");
+    assert.equal(codexMarketplace.plugins[0].name, "starrykit-plugin");
+    assert.equal(claudeMarketplace.plugins[0].name, "starrykit-plugin");
+    assert.equal(codexMarketplace.plugins[0].source.path, "./");
+    assert.equal(claudeMarketplace.plugins[0].source, "./");
+    assert.equal(claudeMarketplace.plugins[0].version, json(".claude-plugin/plugin.json").version);
   });
 
   it("uses the production Hosted MCP without embedded credentials", () => {

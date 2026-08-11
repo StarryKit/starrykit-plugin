@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "starrykit",
+  "description": "Create editable presentations, posters, social graphics, art, and visual design documents with StarryKit.",
+  "owner": {
+    "name": "StarryKit",
+    "url": "https://starrykit.com"
+  },
+  "plugins": [
+    {
+      "name": "starrykit-plugin",
+      "source": "./",
+      "description": "Create editable presentations, posters, social graphics, art, and visual design documents from prompts and references.",
+      "version": "0.4.0"
+    }
+  ]
+}
