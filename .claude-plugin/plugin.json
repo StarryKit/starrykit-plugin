@@ -1,14 +1,33 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "starrykit-plugin",
-  "displayName": "StarryKit Plugin",
-  "version": "0.1.0",
-  "description": "Turn ideas into polished, editable visual design documents with StarryKit.",
+  "displayName": "StarryKit",
+  "version": "0.4.0",
+  "description": "Create editable presentations, posters, social graphics, art, and visual design documents from prompts and references.",
   "author": {
     "name": "StarryKit",
-    "url": "https://github.com/StarryKit"
+    "url": "https://starrykit.com"
   },
-  "homepage": "https://github.com/StarryKit/starrykit-plugin",
+  "homepage": "https://starrykit.com",
   "repository": "https://github.com/StarryKit/starrykit-plugin",
   "license": "MIT",
-  "keywords": ["starrykit", "authoring", "documents", "mcp"]
+  "keywords": [
+    "starrykit",
+    "ai-design",
+    "ai-presentation-maker",
+    "ai-poster-maker",
+    "presentation",
+    "poster",
+    "visual-design",
+    "graphic-design",
+    "art",
+    "social-media",
+    "infographic",
+    "diagram",
+    "editable-design",
+    "pptx",
+    "google-slides"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
 }

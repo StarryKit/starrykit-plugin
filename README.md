@@ -10,31 +10,44 @@
 
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="#overview">Overview</a> ·
   <a href="#install">Install</a> ·
   <a href="#see-it-in-action">Demos</a> ·
   <a href="#use-cases">Use cases</a> ·
-  <a href="#features">Features</a> ·
   <a href="docs/README.md">Manual setup</a> ·
   <a href="https://starrykit.com">Website</a>
 </p>
 
-StarryKit turns your AI agent into a visual co-creator:
+## Overview
 
-- ✨ Go from a prompt to a polished presentation, poster, or social graphic.
-- 🎨 Keep every page fully editable and review each draft in StarryKit.
-- 🔌 Use one shared Skill and Hosted MCP across Codex, Claude Code, Cursor, OpenCode, OpenClaw, and more.
+StarryKit gives your AI agent a complete visual design workflow. Start with an idea, image, website, or source file; create a polished visual document; refine every element; and export it in the format you need. You do not need to find the right template first—your references become the starting point.
+
+| Feature | What it means |
+| --- | --- |
+| **Editable** | Every design stays editable in StarryKit—from individual elements to complete pages. |
+| **Perfect export** | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
+| **Import & recreate** | Provide an image, a website, or a source file such as `design.md`. StarryKit uses it as a visual reference and recreates it as an editable design—no template required. |
+| **1000+ Prompts** | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
 
 ## Install
 
-Send this to your agent:
+StarryKit is not yet listed in the official plugin directories. Add the StarryKit marketplace, then install the plugin directly from it.
 
-```text
-Set up StarryKit for this agent.
-Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit -g -y
-MCP: https://mcp.starrykit.com/mcp
+### Claude Code
+
+```bash
+claude plugin marketplace add StarryKit/starrykit-plugin
+claude plugin install starrykit-plugin@starrykit
 ```
 
-Your agent installs the Skill, configures the MCP, and opens browser OAuth. If needed, open the [manual setup guides](docs/README.md).
+### Codex
+
+```bash
+codex plugin marketplace add StarryKit/starrykit-plugin
+codex plugin add starrykit-plugin@starrykit
+```
+
+The plugin installs the StarryKit Skill and configures the Hosted MCP. Browser OAuth opens when your agent connects for the first time. For other hosts or manual setup, see the [installation guides](docs/README.md).
 
 ## See it in action
 
@@ -83,15 +96,6 @@ Your agent installs the Skill, configures the MCP, and opens browser OAuth. If n
 | <img src="assets/demos/gallery-infographic-reform.webp" alt="Circular materials infographic created with StarryKit" width="280" /> | <img src="assets/demos/gallery-email-green-hour.webp" alt="Editorial product email created with StarryKit" width="280" /> | <img src="assets/demos/gallery-email-decision-drag.webp" alt="Research briefing email created with StarryKit" width="280" /> |
 
 [Explore more work in the StarryKit Gallery.](https://starrykit.com/gallery)
-
-## Features
-
-| Feature | What it means |
-| --- | --- |
-| **Editable** | Every design stays editable in StarryKit—from individual elements to complete pages. |
-| **Perfect export** | Export complete documents or selected pages cleanly to PPTX, PDF, SVG, PNG, JPEG, HTML, or Google Slides. |
-| **Import & recreate** | Provide an image, a website, or a source file such as `design.md`. StarryKit uses it as a visual reference and recreates it as an editable design—no template required. |
-| **1000+ Prompts** | Explore [1,000+ ready-to-use prompts](https://starrykit.com/explore) and visual ideas, then open one in StarryKit to make it your own. |
 
 ---
 

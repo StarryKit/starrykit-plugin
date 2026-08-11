@@ -1,27 +1,49 @@
 {
   "name": "starrykit-plugin",
-  "version": "0.1.0",
-  "description": "Turn ideas into polished, editable visual design documents with StarryKit.",
+  "version": "0.4.0",
+  "description": "Create editable presentations, posters, social graphics, art, and visual design documents from prompts and references.",
   "author": {
     "name": "StarryKit",
-    "url": "https://github.com/StarryKit"
+    "url": "https://starrykit.com"
   },
-  "homepage": "https://github.com/StarryKit/starrykit-plugin",
+  "homepage": "https://starrykit.com",
   "repository": "https://github.com/StarryKit/starrykit-plugin",
   "license": "MIT",
-  "keywords": ["starrykit", "authoring", "documents", "mcp"],
+  "keywords": [
+    "starrykit",
+    "ai-design",
+    "ai-presentation-maker",
+    "ai-poster-maker",
+    "presentation",
+    "poster",
+    "visual-design",
+    "graphic-design",
+    "art",
+    "social-media",
+    "infographic",
+    "diagram",
+    "editable-design",
+    "pptx",
+    "google-slides"
+  ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "StarryKit Plugin",
-    "shortDescription": "Create polished visual design documents.",
-    "longDescription": "Create, understand, and refine presentations, posters, social graphics, and other editable visual design documents with StarryKit's hosted design tools.",
+    "displayName": "StarryKit",
+    "shortDescription": "Create and edit visual designs",
+    "longDescription": "StarryKit turns prompts and references into polished, editable visual documents. Create presentations, posters, social graphics, infographics, diagrams, cards, email designs, web and UI concepts, and visual art; refine every element with AI or direct editing, then export to PPTX, PDF, Google Slides, SVG, PNG, JPEG, or HTML.",
     "developerName": "StarryKit",
-    "category": "Productivity",
-    "capabilities": ["Read", "Write"],
+    "category": "Creativity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://starrykit.com",
+    "privacyPolicyURL": "https://starrykit.com/privacy",
+    "termsOfServiceURL": "https://starrykit.com/terms",
     "defaultPrompt": [
-      "Turn my idea into a polished StarryKit presentation.",
-      "Review my StarryKit design document and refine one page."
-    ]
+      "Create a 10-slide pitch deck for a sustainable urban farming startup raising a seed round",
+      "Design a bold launch poster for a midnight electronic music festival in Tokyo",
+      "Recreate the attached coffee shop landing page screenshot as an editable visual design"
+    ],
+    "brandColor": "#6D5DF6",
+    "composerIcon": "./assets/brand/starrykit-logo.svg"
   },
   "mcpServers": "./.mcp.json"
 }

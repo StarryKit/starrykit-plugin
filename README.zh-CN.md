@@ -10,31 +10,44 @@
 
 <p align="center">
   <a href="README.md">English</a> ·
+  <a href="#概览">概览</a> ·
   <a href="#安装">安装</a> ·
   <a href="#看看实际效果">效果展示</a> ·
   <a href="#使用场景">使用场景</a> ·
-  <a href="#功能">功能</a> ·
   <a href="docs/README.zh-CN.md">手动安装</a> ·
   <a href="https://starrykit.com">官方网站</a>
 </p>
 
-StarryKit 让你的 AI Agent 直接拥有视觉创作能力：
+## 概览
 
-- ✨ 从一句 Prompt 开始，完成演示文稿、海报或社交媒体图片。
-- 🎨 所有页面保持完整可编辑，每一份草稿都可以在 StarryKit 中审核。
-- 🔌 一套 Skill 与 Hosted MCP，同时支持 Codex、Claude Code、Cursor、OpenCode、OpenClaw 等宿主。
+StarryKit 为你的 AI Agent 提供完整的视觉设计工作流。从一个想法、一张图片、一个网站或源文件开始，创建精致的视觉文档，继续调整每个元素，并导出为需要的格式。你不需要先找到合适的模板——任何参考素材都可以成为设计的起点。
+
+| 功能 | 说明 |
+| --- | --- |
+| **完整可编辑** | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
+| **完美导出** | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
+| **导入与复刻** | 提供一张图片、一个网站，或 `design.md` 等源文件。StarryKit 会把它作为视觉参考，复刻成可编辑的设计，不需要预先准备模板。 |
+| **1000+ Prompts** | 浏览 [1,000+ 个可以直接使用的 Prompt](https://starrykit.com/explore) 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
 
 ## 安装
 
-把这一段发送给你的 Agent：
+StarryKit 尚未进入官方 Plugin 市场。请先添加 StarryKit Marketplace，再从中安装 Plugin。
 
-```text
-请为当前 Agent 配置 StarryKit。
-Skill: npx skills add StarryKit/starrykit-plugin --skill starrykit -g -y
-MCP: https://mcp.starrykit.com/mcp
+### Claude Code
+
+```bash
+claude plugin marketplace add StarryKit/starrykit-plugin
+claude plugin install starrykit-plugin@starrykit
 ```
 
-Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作时，请打开[宿主安装指南](docs/README.zh-CN.md)。
+### Codex
+
+```bash
+codex plugin marketplace add StarryKit/starrykit-plugin
+codex plugin add starrykit-plugin@starrykit
+```
+
+Plugin 会安装 StarryKit Skill 并配置 Hosted MCP。Agent 第一次连接时会打开浏览器完成 OAuth。其他宿主或手动配置方式请查看[安装指南](docs/README.zh-CN.md)。
 
 ## 看看实际效果
 
@@ -83,15 +96,6 @@ Agent 会安装 Skill、配置 MCP 并打开浏览器 OAuth。需要手动操作
 | <img src="assets/demos/gallery-infographic-reform.webp" alt="使用 StarryKit 创建的循环材料信息图" width="280" /> | <img src="assets/demos/gallery-email-green-hour.webp" alt="使用 StarryKit 创建的编辑风格产品邮件" width="280" /> | <img src="assets/demos/gallery-email-decision-drag.webp" alt="使用 StarryKit 创建的研究简报邮件" width="280" /> |
 
 [前往 StarryKit Gallery 查看更多作品。](https://starrykit.com/gallery)
-
-## 功能
-
-| 功能 | 说明 |
-| --- | --- |
-| **完整可编辑** | 所有 Design 都能在 StarryKit 中继续编辑，包括单个元素和完整页面。 |
-| **完美导出** | 完整文档或指定页面都可以顺畅导出为 PPTX、PDF、SVG、PNG、JPEG、HTML 或 Google Slides。 |
-| **导入与复刻** | 提供一张图片、一个网站，或 `design.md` 等源文件。StarryKit 会把它作为视觉参考，复刻成可编辑的设计，不需要预先准备模板。 |
-| **1000+ Prompts** | 浏览 [1,000+ 个可以直接使用的 Prompt](https://starrykit.com/explore) 与视觉灵感，并在 StarryKit 中打开、编辑成自己的作品。 |
 
 ---
 
