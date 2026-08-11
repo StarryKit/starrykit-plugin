@@ -9,9 +9,27 @@
   "plugins": [
     {
       "name": "starrykit-plugin",
+      "displayName": "StarryKit",
       "source": "./",
       "description": "Create editable presentations, posters, social graphics, art, and visual design documents from prompts and references.",
-      "version": "0.4.0"
+      "version": "0.4.0",
+      "author": {
+        "name": "StarryKit",
+        "url": "https://starrykit.com"
+      },
+      "homepage": "https://starrykit.com",
+      "repository": "https://github.com/StarryKit/starrykit-plugin",
+      "license": "MIT",
+      "keywords": [
+        "presentation",
+        "poster",
+        "visual-design",
+        "graphic-design",
+        "art",
+        "social-media"
+      ],
+      "category": "design",
+      "tags": ["presentation", "poster", "visual-design", "art"]
     }
   ]
 }

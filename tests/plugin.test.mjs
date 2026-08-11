@@ -49,6 +49,8 @@ describe("plugin bundle", () => {
     assert.equal(metadata.websiteURL, "https://starrykit.com");
     assert.equal(metadata.privacyPolicyURL, "https://starrykit.com/privacy");
     assert.equal(metadata.termsOfServiceURL, "https://starrykit.com/terms");
+    assert.equal(metadata.logo, "./assets/brand/starrykit-app-icon.png");
+    assert.ok(existsSync(resolve(ROOT, metadata.logo)));
   });
 
   it("publishes installable Claude and Codex marketplace catalogs", () => {
@@ -59,6 +61,7 @@ describe("plugin bundle", () => {
     assert.equal(claudeMarketplace.name, "starrykit");
     assert.equal(codexMarketplace.plugins[0].name, "starrykit-plugin");
     assert.equal(claudeMarketplace.plugins[0].name, "starrykit-plugin");
+    assert.equal(claudeMarketplace.plugins[0].displayName, "StarryKit");
     assert.equal(codexMarketplace.plugins[0].source.path, "./");
     assert.equal(claudeMarketplace.plugins[0].source, "./");
     assert.equal(claudeMarketplace.plugins[0].version, json(".claude-plugin/plugin.json").version);
@@ -91,7 +94,16 @@ describe("plugin bundle", () => {
     assert.match(skill, /## Work from any reference/);
     assert.match(skill, /`design\.md`/);
     assert.match(metadata, /display_name: "StarryKit"/);
+    assert.match(metadata, /icon_small: "\.\/assets\/starrykit-app-icon\.svg"/);
+    assert.match(metadata, /icon_large: "\.\/assets\/starrykit-app-icon\.png"/);
+    assert.match(metadata, /brand_color: "#6D5DF6"/);
     assert.match(metadata, /Use \$starrykit /);
+    for (const asset of [
+      "skills/starrykit/assets/starrykit-app-icon.svg",
+      "skills/starrykit/assets/starrykit-app-icon.png",
+    ]) {
+      assert.ok(existsSync(resolve(ROOT, asset)), `${asset} is missing`);
+    }
     assert.ok(!completeSkill.includes("starrykit-authoring"), "legacy Skill identifier must stay removed");
     assert.ok(completeSkill.includes(PRODUCTION_MCP_URL), "Skill must reference the production MCP endpoint");
     for (const boundary of [

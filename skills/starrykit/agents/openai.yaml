@@ -1,6 +1,9 @@
 interface:
   display_name: "StarryKit"
   short_description: "Create polished visual design documents"
+  icon_small: "./assets/starrykit-app-icon.svg"
+  icon_large: "./assets/starrykit-app-icon.png"
+  brand_color: "#6D5DF6"
   default_prompt: "Use $starrykit to turn my idea into a polished, editable StarryKit design document."
 dependencies:
   tools:

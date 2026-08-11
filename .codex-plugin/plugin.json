@@ -43,7 +43,8 @@
       "Recreate the attached coffee shop landing page screenshot as an editable visual design"
     ],
     "brandColor": "#6D5DF6",
-    "composerIcon": "./assets/brand/starrykit-logo.svg"
+    "composerIcon": "./assets/brand/starrykit-logo.svg",
+    "logo": "./assets/brand/starrykit-app-icon.png"
   },
   "mcpServers": "./.mcp.json"
 }
