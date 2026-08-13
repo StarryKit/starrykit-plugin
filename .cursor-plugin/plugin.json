@@ -1,0 +1,36 @@
+{
+  "name": "starrykit-plugin",
+  "displayName": "StarryKit",
+  "version": "0.4.0",
+  "minClientVersions": {
+    "cursor": "3.13.0"
+  },
+  "description": "Bring visual design into Cursor. Turn prompts, images, websites, and source files into polished, editable presentations, posters, social graphics, infographics, diagrams, and visual documents; refine every element with AI, then export to PowerPoint, PDF, Google Slides, SVG, PNG, JPEG, or HTML.",
+  "author": {
+    "name": "StarryKit"
+  },
+  "homepage": "https://starrykit.com",
+  "repository": "https://github.com/StarryKit/starrykit-plugin",
+  "license": "MIT",
+  "logo": "assets/brand/starrykit-app-icon.png",
+  "keywords": [
+    "starrykit",
+    "ai-presentation-maker",
+    "ai-poster-maker",
+    "visual-design",
+    "editable-design",
+    "social-graphics",
+    "infographics",
+    "diagrams"
+  ],
+  "category": "productivity",
+  "tags": [
+    "presentations",
+    "posters",
+    "visual-documents",
+    "design",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}
