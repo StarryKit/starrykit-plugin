@@ -49,7 +49,13 @@ codex plugin add starrykit-plugin@starrykit
 
 ### Cursor
 
-Open `/add-plugin` in Cursor and search for **StarryKit**. While the Marketplace listing is under review, use the [manual Cursor setup](docs/cursor/README.md).
+While the Marketplace listing is under review, install the complete Plugin locally:
+
+```bash
+git clone https://github.com/StarryKit/starrykit-plugin.git ~/.cursor/plugins/local/starrykit-plugin
+```
+
+Restart Cursor or run **Developer: Reload Window**. See the [Cursor installation guide](docs/cursor/README.md) for OAuth and verification.
 
 ### Grok Build
 

@@ -8,17 +8,17 @@
 
 Marketplace 条目目前正在审核。在正式上架前，请使用下面的手动安装方式。
 
-## 手动安装
+## 手动安装 Plugin
 
-Clone 本仓库，并把 canonical Skill 复制到 Cursor 的个人 Skill 目录：
+把完整 Plugin Clone 到 Cursor 的本地 Plugin 目录：
 
 ```sh
-git clone https://github.com/StarryKit/starrykit-plugin.git
-mkdir -p ~/.cursor/skills
-cp -R starrykit-plugin/skills/starrykit ~/.cursor/skills/
+git clone https://github.com/StarryKit/starrykit-plugin.git ~/.cursor/plugins/local/starrykit-plugin
 ```
 
-然后把下面的配置加入全局 `~/.cursor/mcp.json`，或单个项目的 `.cursor/mcp.json`：
+重启 Cursor，或运行 **Developer: Reload Window**。Cursor 会从 Plugin 中加载 bundled Skill 和 MCP 配置。
+
+如果只想配置 MCP、不安装 Plugin，可以把下面的配置加入全局 `~/.cursor/mcp.json`，或单个项目的 `.cursor/mcp.json`：
 
 ```json
 {
