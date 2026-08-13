@@ -49,7 +49,13 @@ codex plugin add starrykit-plugin@starrykit
 
 ### Cursor
 
-在 Cursor 中打开 `/add-plugin`，搜索 **StarryKit**。Marketplace 上架审核期间，请使用 [Cursor 手动安装指南](docs/cursor/README.zh-CN.md)。
+Marketplace 上架审核期间，可以把完整 Plugin 安装到 Cursor 的本地目录：
+
+```bash
+git clone https://github.com/StarryKit/starrykit-plugin.git ~/.cursor/plugins/local/starrykit-plugin
+```
+
+重启 Cursor，或运行 **Developer: Reload Window**。OAuth 和验证步骤请查看 [Cursor 安装指南](docs/cursor/README.zh-CN.md)。
 
 ### Grok Build
 

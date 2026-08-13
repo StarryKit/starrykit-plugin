@@ -8,17 +8,17 @@ Open `/add-plugin` in Cursor, search for **StarryKit**, and select **Install**. 
 
 The Marketplace listing is currently under review. Until it is available, use the manual setup below.
 
-## Manual setup
+## Install the Plugin manually
 
-Clone this repository and copy the canonical Skill into Cursor's personal Skill directory:
+Clone the complete Plugin into Cursor's local Plugin directory:
 
 ```sh
-git clone https://github.com/StarryKit/starrykit-plugin.git
-mkdir -p ~/.cursor/skills
-cp -R starrykit-plugin/skills/starrykit ~/.cursor/skills/
+git clone https://github.com/StarryKit/starrykit-plugin.git ~/.cursor/plugins/local/starrykit-plugin
 ```
 
-Then add this entry to global `~/.cursor/mcp.json`, or to `.cursor/mcp.json` for one project:
+Restart Cursor or run **Developer: Reload Window**. Cursor loads the bundled Skill and MCP configuration from the Plugin.
+
+If you only want to configure the MCP without installing the Plugin, add this entry to global `~/.cursor/mcp.json`, or to `.cursor/mcp.json` for one project:
 
 ```json
 {
