@@ -5,6 +5,7 @@ import { describe, it } from "node:test";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const PRODUCTION_MCP_URL = "https://mcp.starrykit.com/mcp";
+const DEVELOPMENT_APP_ID = "asdk_app_6a7d4856434081919523a0971a413bb4";
 const HOSTS = ["codex", "claude-code", "cursor", "opencode", "openclaw", "pi", "other-hosts"];
 
 function read(path) {
@@ -33,8 +34,22 @@ describe("plugin bundle", () => {
     assert.equal(codex.license, "MIT");
     assert.equal(claude.license, "MIT");
     assert.equal(codex.mcpServers, "./.mcp.json");
+    assert.equal(codex.apps, "./.app.json");
     assert.equal(claude.mcpServers, "./.mcp.json");
     assert.equal(claude.skills, "./skills/");
+  });
+
+  it("installs the registered StarryKit app with the Codex plugin", () => {
+    const app = json(".app.json");
+
+    assert.deepEqual(app, {
+      apps: {
+        starrykit: {
+          id: DEVELOPMENT_APP_ID,
+          required: true,
+        },
+      },
+    });
   });
 
   it("provides concise Codex discovery metadata and starter prompts", () => {
