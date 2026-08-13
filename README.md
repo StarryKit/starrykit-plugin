@@ -31,7 +31,7 @@ StarryKit gives your AI agent a complete visual design workflow. Start with an i
 
 ## Install
 
-StarryKit is not yet listed in the official plugin directories. Add the StarryKit marketplace, then install the plugin directly from it.
+Install StarryKit for your preferred agent host.
 
 ### Claude Code
 
@@ -45,6 +45,12 @@ claude plugin install starrykit-plugin@starrykit
 ```bash
 codex plugin marketplace add StarryKit/starrykit-plugin
 codex plugin add starrykit-plugin@starrykit
+```
+
+### Grok Build
+
+```bash
+grok plugin install StarryKit/starrykit-plugin --trust
 ```
 
 The plugin installs the StarryKit Skill and configures the Hosted MCP. Browser OAuth opens when your agent connects for the first time. For other hosts or manual setup, see the [installation guides](docs/README.md).

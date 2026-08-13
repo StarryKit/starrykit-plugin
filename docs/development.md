@@ -8,7 +8,7 @@ This repository is the installable client-side StarryKit Plugin bundle. It conta
 
 The test verifies that:
 
-- the Codex and Claude manifests describe the same plugin release;
+- the Codex, Claude, and Grok manifests keep the same release identity and component paths while allowing host-specific marketing copy;
 - the bundled MCP config points to the production HTTPS endpoint without embedded credentials;
 - the canonical Skill has valid metadata, references the production MCP endpoint, and preserves essential safety boundaries;
 - English and Chinese user docs exist for every documented host;

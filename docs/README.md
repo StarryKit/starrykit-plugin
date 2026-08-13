@@ -6,6 +6,7 @@ Choose your agent host:
 
 - [Codex](codex/README.md)
 - [Claude Code](claude-code/README.md)
+- [Grok Build](grok-build/README.md)
 - [Cursor](cursor/README.md)
 - [OpenCode](opencode/README.md)
 - [OpenClaw](openclaw/README.md)

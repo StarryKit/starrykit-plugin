@@ -31,7 +31,7 @@ StarryKit 为你的 AI Agent 提供完整的视觉设计工作流。从一个想
 
 ## 安装
 
-StarryKit 尚未进入官方 Plugin 市场。请先添加 StarryKit Marketplace，再从中安装 Plugin。
+请根据你使用的 Agent 宿主安装 StarryKit。
 
 ### Claude Code
 
@@ -45,6 +45,12 @@ claude plugin install starrykit-plugin@starrykit
 ```bash
 codex plugin marketplace add StarryKit/starrykit-plugin
 codex plugin add starrykit-plugin@starrykit
+```
+
+### Grok Build
+
+```bash
+grok plugin install StarryKit/starrykit-plugin --trust
 ```
 
 Plugin 会安装 StarryKit Skill 并配置 Hosted MCP。Agent 第一次连接时会打开浏览器完成 OAuth。其他宿主或手动配置方式请查看[安装指南](docs/README.zh-CN.md)。
