@@ -47,6 +47,10 @@ codex plugin marketplace add StarryKit/starrykit-plugin
 codex plugin add starrykit-plugin@starrykit
 ```
 
+### Cursor
+
+Open `/add-plugin` in Cursor and search for **StarryKit**. While the Marketplace listing is under review, use the [manual Cursor setup](docs/cursor/README.md).
+
 ### Grok Build
 
 ```bash

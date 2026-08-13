@@ -2,9 +2,15 @@
 
 [中文](README.zh-CN.md) · [Back to the Plugin](../../README.md)
 
-## 1. Install the Skill
+## Install from the Cursor Marketplace
 
-Clone this repository and copy the canonical Skill into a Cursor-supported personal location:
+Open `/add-plugin` in Cursor, search for **StarryKit**, and select **Install**. Cursor installs the canonical StarryKit Skill and configures the Hosted MCP together.
+
+The Marketplace listing is currently under review. Until it is available, use the manual setup below.
+
+## Manual setup
+
+Clone this repository and copy the canonical Skill into Cursor's personal Skill directory:
 
 ```sh
 git clone https://github.com/StarryKit/starrykit-plugin.git
@@ -12,21 +18,22 @@ mkdir -p ~/.cursor/skills
 cp -R starrykit-plugin/skills/starrykit ~/.cursor/skills/
 ```
 
-## 2. Configure MCP
-
-Add this entry to your global `~/.cursor/mcp.json`, or to `.cursor/mcp.json` for one project:
+Then add this entry to global `~/.cursor/mcp.json`, or to `.cursor/mcp.json` for one project:
 
 ```json
 {
   "mcpServers": {
     "starrykit": {
+      "type": "http",
       "url": "https://mcp.starrykit.com/mcp"
     }
   }
 }
 ```
 
-Open Cursor's MCP settings and complete OAuth when prompted. Cursor Agent CLI users can run:
+## Connect your account
+
+Open Cursor's MCP settings and complete browser OAuth when prompted. Cursor Agent CLI users can run:
 
 ```sh
 cursor-agent mcp login starrykit
@@ -35,8 +42,8 @@ cursor-agent mcp list-tools starrykit
 
 Do not add credentials or static Authorization headers.
 
-## 3. Verify
+## Verify
 
-Ask Cursor Agent to use StarryKit to list the visual documents you can access. The setup is ready when it can call `list_documents`.
+Ask Cursor Agent to use StarryKit to list the visual documents you can access. The setup is ready when it can call `list_documents` and returns your authorized documents, or an empty result without an authentication error.
 
-Official references: [Cursor MCP](https://cursor.com/docs/context/mcp), [Cursor Agent CLI MCP commands](https://cursor.com/docs/cli/reference/parameters), [Cursor Skills](https://cursor.com/docs/skills).
+Official references: [Cursor plugins](https://cursor.com/docs/plugins), [Cursor MCP](https://cursor.com/docs/context/mcp), [Cursor Agent CLI MCP commands](https://cursor.com/docs/cli/reference/parameters), and [Cursor Skills](https://cursor.com/docs/skills).

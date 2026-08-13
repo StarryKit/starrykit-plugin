@@ -21,35 +21,50 @@ describe("plugin bundle", () => {
     const codex = json(".codex-plugin/plugin.json");
     const claude = json(".claude-plugin/plugin.json");
     const grok = json(".grok-plugin/plugin.json");
+    const cursor = json(".cursor-plugin/plugin.json");
     const packageManifest = json("package.json");
 
     assert.equal(codex.name, "starrykit-plugin");
     assert.equal(claude.name, codex.name);
     assert.equal(grok.name, codex.name);
+    assert.equal(cursor.name, codex.name);
     assert.equal(claude.version, codex.version);
     assert.equal(grok.version, codex.version);
+    assert.equal(cursor.version, codex.version);
     assert.equal(packageManifest.version, codex.version);
     assert.equal(codex.interface.displayName, "StarryKit");
     assert.equal(claude.displayName, "StarryKit");
     assert.equal(grok.displayName, "StarryKit");
+    assert.equal(cursor.displayName, "StarryKit");
     assert.deepEqual(claude.author, codex.author);
     assert.deepEqual(grok.author, codex.author);
+    assert.equal(cursor.author.name, codex.author.name);
     assert.equal(claude.homepage, codex.homepage);
     assert.equal(grok.homepage, codex.homepage);
+    assert.equal(cursor.homepage, codex.homepage);
     assert.equal(claude.repository, codex.repository);
     assert.equal(grok.repository, codex.repository);
+    assert.equal(cursor.repository, codex.repository);
     assert.equal(codex.license, "MIT");
     assert.equal(claude.license, "MIT");
     assert.equal(grok.license, "MIT");
+    assert.equal(cursor.license, "MIT");
     assert.equal(codex.mcpServers, "./.mcp.json");
     assert.equal(codex.apps, "./.app.json");
     assert.equal(claude.mcpServers, "./.mcp.json");
     assert.equal(grok.mcpServers, "./.mcp.json");
+    assert.equal(cursor.mcpServers, "./mcp.json");
     assert.equal(claude.skills, "./skills/");
     assert.equal(grok.skills, "./skills/");
+    assert.equal(cursor.skills, "./skills/");
     assert.notEqual(grok.description, claude.description, "Grok copy should remain host-specific");
+    assert.notEqual(cursor.description, claude.description, "Cursor copy should remain host-specific");
+    assert.equal(cursor.category, "productivity");
     assert.equal(grok.logo, "assets/brand/starrykit-app-icon.png");
     assert.ok(existsSync(resolve(ROOT, grok.logo)));
+    assert.equal(cursor.logo, "assets/brand/starrykit-app-icon.png");
+    assert.ok(existsSync(resolve(ROOT, cursor.logo)));
+    assert.ok(!existsSync(resolve(ROOT, ".cursor-plugin/marketplace.json")), "single-plugin Cursor repo must not ship a marketplace manifest");
   });
 
   it("installs the registered StarryKit app with the Codex plugin", () => {
@@ -97,11 +112,13 @@ describe("plugin bundle", () => {
 
   it("uses the production Hosted MCP without embedded credentials", () => {
     const mcp = json(".mcp.json");
+    const cursorMcp = json("mcp.json");
     assert.deepEqual(mcp, {
       mcpServers: {
         starrykit: { type: "http", url: PRODUCTION_MCP_URL },
       },
     });
+    assert.deepEqual(cursorMcp, mcp, "Cursor MCP config must match the canonical MCP config");
 
     const serialized = JSON.stringify(mcp);
     for (const forbidden of ["apiKey", "accessToken", "clientSecret", "Authorization", "mcp.stage.starrykit.com"]) {

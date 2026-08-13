@@ -47,6 +47,10 @@ codex plugin marketplace add StarryKit/starrykit-plugin
 codex plugin add starrykit-plugin@starrykit
 ```
 
+### Cursor
+
+在 Cursor 中打开 `/add-plugin`，搜索 **StarryKit**。Marketplace 上架审核期间，请使用 [Cursor 手动安装指南](docs/cursor/README.zh-CN.md)。
+
 ### Grok Build
 
 ```bash
