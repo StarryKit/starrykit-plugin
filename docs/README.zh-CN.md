@@ -6,6 +6,7 @@
 
 - [Codex](codex/README.zh-CN.md)
 - [Claude Code](claude-code/README.zh-CN.md)
+- [Grok Build](grok-build/README.zh-CN.md)
 - [Cursor](cursor/README.zh-CN.md)
 - [OpenCode](opencode/README.zh-CN.md)
 - [OpenClaw](openclaw/README.zh-CN.md)

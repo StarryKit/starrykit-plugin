@@ -6,7 +6,7 @@ import { describe, it } from "node:test";
 const ROOT = resolve(import.meta.dirname, "..");
 const PRODUCTION_MCP_URL = "https://mcp.starrykit.com/mcp";
 const DEVELOPMENT_APP_ID = "asdk_app_6a7d4856434081919523a0971a413bb4";
-const HOSTS = ["codex", "claude-code", "cursor", "opencode", "openclaw", "pi", "other-hosts"];
+const HOSTS = ["codex", "claude-code", "grok-build", "cursor", "opencode", "openclaw", "pi", "other-hosts"];
 
 function read(path) {
   return readFileSync(resolve(ROOT, path), "utf8");
@@ -20,23 +20,36 @@ describe("plugin bundle", () => {
   it("keeps the manifests aligned", () => {
     const codex = json(".codex-plugin/plugin.json");
     const claude = json(".claude-plugin/plugin.json");
+    const grok = json(".grok-plugin/plugin.json");
     const packageManifest = json("package.json");
 
     assert.equal(codex.name, "starrykit-plugin");
     assert.equal(claude.name, codex.name);
+    assert.equal(grok.name, codex.name);
     assert.equal(claude.version, codex.version);
+    assert.equal(grok.version, codex.version);
     assert.equal(packageManifest.version, codex.version);
     assert.equal(codex.interface.displayName, "StarryKit");
     assert.equal(claude.displayName, "StarryKit");
+    assert.equal(grok.displayName, "StarryKit");
     assert.deepEqual(claude.author, codex.author);
+    assert.deepEqual(grok.author, codex.author);
     assert.equal(claude.homepage, codex.homepage);
+    assert.equal(grok.homepage, codex.homepage);
     assert.equal(claude.repository, codex.repository);
+    assert.equal(grok.repository, codex.repository);
     assert.equal(codex.license, "MIT");
     assert.equal(claude.license, "MIT");
+    assert.equal(grok.license, "MIT");
     assert.equal(codex.mcpServers, "./.mcp.json");
     assert.equal(codex.apps, "./.app.json");
     assert.equal(claude.mcpServers, "./.mcp.json");
+    assert.equal(grok.mcpServers, "./.mcp.json");
     assert.equal(claude.skills, "./skills/");
+    assert.equal(grok.skills, "./skills/");
+    assert.notEqual(grok.description, claude.description, "Grok copy should remain host-specific");
+    assert.equal(grok.logo, "assets/brand/starrykit-app-icon.png");
+    assert.ok(existsSync(resolve(ROOT, grok.logo)));
   });
 
   it("installs the registered StarryKit app with the Codex plugin", () => {
