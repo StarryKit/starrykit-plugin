@@ -46,5 +46,6 @@
     "composerIcon": "./assets/brand/starrykit-logo.svg",
     "logo": "./assets/brand/starrykit-app-icon.png"
   },
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "apps": "./.app.json"
 }

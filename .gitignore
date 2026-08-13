@@ -4,3 +4,4 @@ __pycache__/
 *.py[cod]
 .DS_Store
 chatgpt-app-submission.json
+.local/set-openai-domain-challenge.zsh
