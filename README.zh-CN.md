@@ -40,12 +40,9 @@ claude plugin marketplace add StarryKit/starrykit-plugin
 claude plugin install starrykit-plugin@starrykit
 ```
 
-### Codex
+### ChatGPT & Codex
 
-```bash
-codex plugin marketplace add StarryKit/starrykit-plugin
-codex plugin add starrykit-plugin@starrykit
-```
+[前往 ChatGPT 官方 Plugin Directory 安装 StarryKit。](https://chatgpt.com/plugins/plugin_asdk_app_6a7ad0afe3ec819188809d7760d8bc2a)
 
 ### Cursor
 
