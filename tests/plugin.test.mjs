@@ -5,6 +5,7 @@ import { describe, it } from "node:test";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const PRODUCTION_MCP_URL = "https://mcp.starrykit.com/mcp";
+const OFFICIAL_CHATGPT_PLUGIN_URL = "https://chatgpt.com/plugins/plugin_asdk_app_6a7ad0afe3ec819188809d7760d8bc2a";
 const DEVELOPMENT_APP_ID = "asdk_app_6a7d4856434081919523a0971a413bb4";
 const HOSTS = ["codex", "claude-code", "grok-build", "cursor", "opencode", "openclaw", "pi", "other-hosts"];
 
@@ -78,6 +79,15 @@ describe("plugin bundle", () => {
         },
       },
     });
+  });
+
+  it("links ChatGPT and Codex users to the official Plugin Directory listing", () => {
+    for (const path of ["README.md", "README.zh-CN.md"]) {
+      const source = read(path);
+      assert.ok(source.includes(OFFICIAL_CHATGPT_PLUGIN_URL), `${path} must link to the official ChatGPT Plugin listing`);
+      assert.ok(!source.includes("codex plugin marketplace add"), `${path} must not advertise the legacy Codex marketplace flow`);
+      assert.ok(!source.includes("codex plugin add"), `${path} must not advertise the legacy Codex install flow`);
+    }
   });
 
   it("provides concise Codex discovery metadata and starter prompts", () => {
