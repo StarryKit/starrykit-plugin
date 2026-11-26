@@ -2,6 +2,10 @@
   <img src="assets/brand/starrykit-wordmark-on-purple.svg" alt="StarryKit" width="360" />
 </p>
 
+<!-- yarkr:badges:start -->
+[![Indexed on Yarkr](https://api.yarkr.com/functions/v1/api/api/v1/badges/repos/StarryKit/starrykit-plugin/version.svg)](https://yarkr.com/arks/starrykit/starrykit-plugin)
+<!-- yarkr:badges:end -->
+
 <h1 align="center">StarryKit Plugin</h1>
 
 <p align="center">
@@ -61,6 +65,38 @@ grok plugin install StarryKit/starrykit-plugin --trust
 ```
 
 The plugin installs the StarryKit Skill and configures the Hosted MCP. Browser OAuth opens when your agent connects for the first time. For other hosts or manual setup, see the [installation guides](docs/README.md).
+
+<!-- yarkr:install:start -->
+## Install with Yarkr
+
+This repo is indexed on [Yarkr](https://yarkr.com/arks/starrykit/starrykit-plugin) as the ark [starrykit/starrykit-plugin](https://yarkr.com/arks/starrykit/starrykit-plugin), so its skills install into Claude Code, Codex, Cursor and other agent harnesses with one command.
+
+### CLI
+
+Install the whole ark, which Yarkr keeps equal to this repo:
+
+```bash
+npx yarkr-cli sync starrykit/starrykit-plugin
+```
+
+Or add individual skills:
+
+```bash
+npx yarkr-cli add skill:starrykit/starrykit-plugin/starrykit
+```
+
+No Node.js? `curl -fsSL https://yarkr.com/install.sh | sh` (macOS, Linux) or `irm https://yarkr.com/install.ps1 | iex` (Windows PowerShell) installs `yarkr` as a standalone binary; then type `yarkr` in place of `npx yarkr-cli`.
+
+### MCP
+
+Connect your agent to the ark over MCP:
+
+```bash
+npx yarkr-cli mcp add starrykit/starrykit-plugin
+```
+
+Or point any MCP client at `https://api.yarkr.com/functions/v1/api/mcp/o/starrykit/starrykit-plugin`.
+<!-- yarkr:install:end -->
 
 ## See it in action
 
